@@ -1,4 +1,5 @@
 package Obs;
 
-public class Observer {
+public interface Observer {
+    public void update(String str);
 }
