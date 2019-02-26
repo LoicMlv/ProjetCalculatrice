@@ -7,6 +7,7 @@ public class ButtonInfo {
     boolean isDot;
     boolean isNumber;
     boolean isClear;
+    boolean isDelete;
 
     public ButtonInfo (String buttonText){
 
@@ -17,6 +18,8 @@ public class ButtonInfo {
     private void readButtonValue(String buttonText) {
         switch (buttonText){
             case "C" : isClear = true; break;
+
+            case "DEL" : isDelete = true; break;
 
             case "1" : isNumber = true; break;
             case "2" : isNumber = true; break;
@@ -63,4 +66,9 @@ public class ButtonInfo {
     public boolean isClear() {
         return isClear;
     }
+
+    public boolean isDelete() {
+        return isDelete;
+    }
+
 }

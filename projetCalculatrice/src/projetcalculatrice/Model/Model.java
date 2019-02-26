@@ -102,7 +102,26 @@ public class Model extends Observable {
 
     }
 
-    public void setComputationText(String newInputString) {
+    public void Delete() {
+        currentTotal = "0";
+        StringBuilder str = new StringBuilder(currentInputString);
+        try {
+            str.deleteCharAt(currentInputString.length() - 1);
+        }catch(Exception ex){
+                ex.getMessage();
+            }
+        currentInputString = str.toString();
+
+        setChanged();
+
+        CalcDisplayData update = new CalcDisplayData();
+        update.setComputationText(currentInputString);
+        update.setCurrentTotal(currentTotal);
+
+        notifyObservers(update);
+
+    }
+        public void setComputationText(String newInputString) {
         currentInputString = newInputString;
 
         setChanged();

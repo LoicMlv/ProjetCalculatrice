@@ -142,8 +142,16 @@ public class View extends JFrame implements Observer {
         //last row, e button
         gbc.gridx = 0;
         gbc.gridy = 7;
-        gbc.gridwidth=4;
+
+        gbc.gridwidth=1;
+        gbc.fill = GridBagConstraints.BOTH;;
         add(buttonRetriever.next(), gbc);
+
+        gbc.gridx = 1;
+        add(buttonRetriever.next(), gbc);
+
+
+
     }
 
     private void createButtonList() {
@@ -166,6 +174,8 @@ public class View extends JFrame implements Observer {
         buttonList.add(new JButton("*"));
         buttonList.add(new JButton("="));
         buttonList.add(new JButton("%"));
+        buttonList.add(new JButton("DEL"));
+
     }
 
     private void configureTotalDisplay() {

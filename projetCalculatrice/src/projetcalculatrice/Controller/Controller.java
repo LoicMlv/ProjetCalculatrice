@@ -38,6 +38,8 @@ public class Controller {
 
             if (buttonInfo.isClear) {model.Clear();return;}
 
+            if (buttonInfo.isDelete) {model.Delete();return;}
+
             if (stringInfo.isEmpty) {
 
                 if (buttonInfo.isNumber) {setComputationText(computationText + buttonText);
