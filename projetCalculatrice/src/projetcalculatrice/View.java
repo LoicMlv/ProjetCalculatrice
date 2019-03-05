@@ -133,25 +133,32 @@ public class View extends JFrame implements Observer {
         gbc.gridx = 3;
         add(buttonRetriever.next(), gbc);
 
+        //last row, e button
+        gbc.gridx = 0;
+        gbc.gridy = 7;
+        add(buttonRetriever.next(), gbc);
+
+        gbc.gridx = 1;
+        add(buttonRetriever.next(), gbc);
+
+        gbc.gridx = 2;
+        add(buttonRetriever.next(), gbc);
+
+        gbc.gridx = 3;
+        add(buttonRetriever.next(), gbc);
         //last row, equals button
         gbc.gridx = 0;
         gbc.gridy = 6;
         gbc.gridwidth=4;
         add(buttonRetriever.next(), gbc);
 
-        //last row, e button
+
+
+        //last row, equals button
         gbc.gridx = 0;
-        gbc.gridy = 7;
-
-        gbc.gridwidth=1;
-        gbc.fill = GridBagConstraints.BOTH;;
+        gbc.gridy = 8;
+        gbc.gridwidth=4;
         add(buttonRetriever.next(), gbc);
-
-        gbc.gridx = 1;
-        add(buttonRetriever.next(), gbc);
-
-
-
     }
 
     private void createButtonList() {
@@ -175,6 +182,9 @@ public class View extends JFrame implements Observer {
         buttonList.add(new JButton("="));
         buttonList.add(new JButton("%"));
         buttonList.add(new JButton("DEL"));
+        buttonList.add(new JButton("("));
+        buttonList.add(new JButton(")"));
+        buttonList.add(new JButton("+/-"));
 
     }
 
