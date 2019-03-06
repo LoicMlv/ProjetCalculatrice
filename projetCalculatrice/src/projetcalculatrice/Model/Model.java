@@ -101,6 +101,58 @@ public class Model extends Observable {
         notifyObservers(update);
 
     }
+    public void Conversion(){
+        // Récupération de tous les nombres un par un
+        String[] numberTable = currentInputString.split("[+|/|%|*|-]");
+
+        // Récupération du dernier nombre qui est donc le nombre à convertir
+        String number2Convert = numberTable[numberTable.length-1];
+
+        // Récupération du symbole avant le dernier nombre pour savoir la conversion à faire
+        String symbol2Convert = currentInputString.substring(currentInputString.length() - number2Convert.length() - 1 , currentInputString.length() - number2Convert.length() );
+        // Si le symbole à convertir appartient (%/*) alors on passe le boolean à vrai, ce qui permettra de garder ce symbole et d'y ajouter le caratère "-" après
+        boolean symbolCheck = false;
+        if (symbol2Convert.equals("%") || symbol2Convert.equals("*") || symbol2Convert.equals("/")){
+            symbolCheck = true;
+        }
+        // Récupération du caractère juste avant le symbole à convertir
+        String symbol = currentInputString.substring(currentInputString.length() - number2Convert.length() - 2, currentInputString.length() - number2Convert.length() - 1);
+        // Si ce caractère appartient (%/*) alors on passe le boolean à vrai, ce qui permettra de garder ce symbole sans y ajouter le caractère "+" après
+        boolean substractionCheck = false;
+        if(symbol.equals("%") || symbol.equals("*") || symbol.equals("/")){
+            substractionCheck = true;
+        }
+
+        // Récupération des nombres et des symboles qui se trouve avant le symbole du nombre à convertir
+        String postSymbol = currentInputString.substring(0,currentInputString.length() - number2Convert.length() - 1);
+
+        // Modification de la valeur du symbole
+        if(symbolCheck){
+            symbol2Convert += "-";
+        }else if(substractionCheck){
+            symbol2Convert = "";
+        }else{
+            if(symbol2Convert.equals("-") ){
+                symbol2Convert = "+";
+            }else if(symbol2Convert.equals("+")){
+                symbol2Convert = "-";
+            }else{
+                symbol2Convert += "-";
+            }
+        }
+
+
+
+        // On recréer la chaine de calcul avec la conversion effectuée
+        currentInputString = postSymbol + symbol2Convert + number2Convert;
+        setChanged();
+        CalcDisplayData update = new CalcDisplayData();
+        update.setComputationText(currentInputString);
+        update.setCurrentTotal(currentTotal);
+
+        notifyObservers(update);
+
+    }
 
     public void Delete() {
         currentTotal = "0";
@@ -121,7 +173,10 @@ public class Model extends Observable {
         notifyObservers(update);
 
     }
-        public void setComputationText(String newInputString) {
+
+
+
+    public void setComputationText(String newInputString) {
         currentInputString = newInputString;
 
         setChanged();

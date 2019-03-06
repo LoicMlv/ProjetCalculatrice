@@ -23,7 +23,7 @@ public class StringParser {
     private List<String> extractTokens(String string) {
 
         String[] tokens = string
-                .split(String.format(WITH_DELIMITERS, "[*/%+-]"));
+                .split(String.format(WITH_DELIMITERS, "[a-z][*/%+-]"));
         List<String> linkedTokens = Arrays.asList(tokens);
 
         return linkedTokens;

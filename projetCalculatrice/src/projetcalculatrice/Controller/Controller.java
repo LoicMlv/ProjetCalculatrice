@@ -40,6 +40,9 @@ public class Controller {
 
             if (buttonInfo.isDelete) {model.Delete();return;}
 
+            if(buttonInfo.isConversion) {model.Conversion();return;}
+
+
             if (stringInfo.isEmpty) {
 
                 if (buttonInfo.isNumber) {setComputationText(computationText + buttonText);

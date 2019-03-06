@@ -8,6 +8,7 @@ public class ButtonInfo {
     boolean isNumber;
     boolean isClear;
     boolean isDelete;
+    boolean isConversion;
 
     public ButtonInfo (String buttonText){
 
@@ -40,6 +41,8 @@ public class ButtonInfo {
             case "/" :  isOperator = true; break;
             case "%" : isOperator = true; break;
 
+            case "+/-": isConversion = true; break;
+
             case "=" : isEquals = true; break;
 
             default : System.out.println("BUTTON TYPE NOT FOUND");
@@ -70,5 +73,7 @@ public class ButtonInfo {
     public boolean isDelete() {
         return isDelete;
     }
+
+    public boolean isConversion() { return isConversion; }
 
 }
