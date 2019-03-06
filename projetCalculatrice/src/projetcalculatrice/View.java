@@ -177,14 +177,15 @@ public class View extends JFrame implements Observer {
         buttonList.add(new JButton("/"));
         buttonList.add(new JButton("0"));
         buttonList.add(new JButton("."));
-        buttonList.add(new JButton("C"));
+        buttonList.add(new JButton("+/-"));
         buttonList.add(new JButton("*"));
-        buttonList.add(new JButton("="));
         buttonList.add(new JButton("%"));
         buttonList.add(new JButton("DEL"));
         buttonList.add(new JButton("("));
         buttonList.add(new JButton(")"));
-        buttonList.add(new JButton("+/-"));
+        buttonList.add(new JButton("C"));
+        buttonList.add(new JButton("="));
+
 
     }
 

@@ -107,24 +107,42 @@ public class Model extends Observable {
 
         // Récupération du dernier nombre qui est donc le nombre à convertir
         String number2Convert = numberTable[numberTable.length-1];
-
-        // Récupération du symbole avant le dernier nombre pour savoir la conversion à faire
-        String symbol2Convert = currentInputString.substring(currentInputString.length() - number2Convert.length() - 1 , currentInputString.length() - number2Convert.length() );
-        // Si le symbole à convertir appartient (%/*) alors on passe le boolean à vrai, ce qui permettra de garder ce symbole et d'y ajouter le caratère "-" après
+        String symbol2Convert;
+        String symbol;
+        String postSymbol;
         boolean symbolCheck = false;
-        if (symbol2Convert.equals("%") || symbol2Convert.equals("*") || symbol2Convert.equals("/")){
-            symbolCheck = true;
-        }
-        // Récupération du caractère juste avant le symbole à convertir
-        String symbol = currentInputString.substring(currentInputString.length() - number2Convert.length() - 2, currentInputString.length() - number2Convert.length() - 1);
-        // Si ce caractère appartient (%/*) alors on passe le boolean à vrai, ce qui permettra de garder ce symbole sans y ajouter le caractère "+" après
         boolean substractionCheck = false;
-        if(symbol.equals("%") || symbol.equals("*") || symbol.equals("/")){
-            substractionCheck = true;
+        if (currentInputString.length() > number2Convert.length()){
+            // Récupération du symbole avant le dernier nombre pour savoir la conversion à faire
+            symbol2Convert = currentInputString.substring(currentInputString.length() - number2Convert.length() - 1 , currentInputString.length() - number2Convert.length() );
+            // Si le symbole à convertir appartient (%/*) alors on passe le boolean à vrai, ce qui permettra de garder ce symbole et d'y ajouter le caratère "-" après
+            if (symbol2Convert.equals("%") || symbol2Convert.equals("*") || symbol2Convert.equals("/")){
+                symbolCheck = true;
+            }
+            if(currentInputString.length() - number2Convert.length() > 2){
+                // Récupération du caractère juste avant le symbole à convertir
+                symbol = currentInputString.substring(currentInputString.length() - number2Convert.length() - 2, currentInputString.length() - number2Convert.length() - 1);
+                // Si ce caractère appartient (%/*) alors on passe le boolean à vrai, ce qui permettra de garder ce symbole sans y ajouter le caractère "+" après
+                if(symbol.equals("%") || symbol.equals("*") || symbol.equals("/")){
+                    substractionCheck = true;
+                }
+            }
+
+            // Récupération des nombres et des symboles qui se trouve avant le symbole du nombre à convertir
+            postSymbol = currentInputString.substring(0,currentInputString.length() - number2Convert.length() - 1);
+
+            // Si il n'y a pas de valeur avant le symbole et que le symbole à convertir est "+" alors le boolean passe à vrai
+            // ce qui permettra de ne pas ajouter un +
+            // c'est le cas quand la valeur entré est -9
+            // il n'y a rien avant le -, et lors de la converion on veut 9 et pas +9
+            if(postSymbol.length() == 0 && symbol2Convert.equals("-")){
+                substractionCheck = true;
+            }
+        }else{
+            symbol2Convert = "+";
+            postSymbol ="";
         }
 
-        // Récupération des nombres et des symboles qui se trouve avant le symbole du nombre à convertir
-        String postSymbol = currentInputString.substring(0,currentInputString.length() - number2Convert.length() - 1);
 
         // Modification de la valeur du symbole
         if(symbolCheck){
