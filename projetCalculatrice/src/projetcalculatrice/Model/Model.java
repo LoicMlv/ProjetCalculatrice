@@ -148,7 +148,6 @@ public class Model extends Observable {
         setChanged();
         CalcDisplayData update = new CalcDisplayData();
         update.setComputationText(currentInputString);
-        update.setCurrentTotal(currentTotal);
 
         notifyObservers(update);
 
@@ -177,6 +176,7 @@ public class Model extends Observable {
 
 
     public void setComputationText(String newInputString) {
+
         currentInputString = newInputString;
 
         setChanged();
@@ -190,6 +190,7 @@ public class Model extends Observable {
 
     public void setCurrentTotal(String newTotal) {
         float floatTotal = Float.parseFloat(newTotal);
+
         int intTotal = (int) floatTotal;
 
         setCurrentTotalAsIntValueIfPossible(floatTotal, intTotal);
