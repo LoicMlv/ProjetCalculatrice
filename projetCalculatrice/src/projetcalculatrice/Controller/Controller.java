@@ -2,7 +2,9 @@ package projetcalculatrice.Controller;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 
 import javax.swing.JButton;
 
@@ -26,6 +28,7 @@ public class Controller {
 
     class CalcButtonListener implements ActionListener {
         boolean OperationAlreadyHappened = false;
+        ArrayList<Boolean> isOpened = new ArrayList<>();
 
         public void actionPerformed(ActionEvent e) {
 
@@ -38,13 +41,34 @@ public class Controller {
 
             if (buttonInfo.isClear) {model.Clear();return;}
 
-            if (buttonInfo.isDelete) {model.Delete();return;}
+            if (buttonInfo.isDelete) {
+                if (stringInfo.isLastCharacterOBracket()){
+                    Object o = isOpened.get(isOpened.size()-1);
+                    isOpened.remove(o);
+                    System.out.println(isOpened.size());
+
+                }else if (stringInfo.isLastCharacterCBracket()){
+                    isOpened.add(true);
+                    System.out.println(isOpened.size());
+
+                }
+                model.Delete();return;}
 
             if (stringInfo.isEmpty) {
 
                 if (buttonInfo.isNumber) {setComputationText(computationText + buttonText);
                 } else if (buttonInfo.isDot) {setComputationText(computationText + buttonText);
-                } else if (buttonInfo.isOperator) {} // do nothing
+                } else if (buttonInfo.isOBracket) {
+                    try{
+                        setComputationText(computationText + buttonText);
+                        isOpened.add(true);
+                        System.out.println(isOpened.size());
+                    }catch(Exception ex){
+                        ex.getMessage();
+                    }
+
+                } else if (buttonInfo.isCBracket) {} // do nothing
+                else if (buttonInfo.isOperator) {} // do nothing
                 else if (buttonInfo.isEquals) {} // do nothing
 
             } else { // string is NOT empty
@@ -62,10 +86,64 @@ public class Controller {
                             setComputationText(computationText + buttonText);
                         } else if (buttonInfo.isDot) {
                             setComputationText(computationText + buttonText);
+                        } else if (buttonInfo.isOBracket) {
+                          // do nothing
+                        } else if (buttonInfo.isCBracket && !isOpened.isEmpty()) {
+                            setComputationText(computationText + buttonText);
+                            Object o = isOpened.get(isOpened.size()-1);
+                            isOpened.remove(o);
+                            System.out.println(isOpened.size());
+
                         } else if (buttonInfo.isEquals) {
+                            while (!isOpened.isEmpty()) {
+                                setComputationText(computationText + ")");
+                                Object o = isOpened.get(isOpened.size()-1);
+                                isOpened.remove(o);
+                            }
                             OperationAlreadyHappened = true;
                             performComputation();
                         }
+                    }
+                    if (stringInfo.isLastCharacterOBracket) {
+
+                        if (buttonInfo.isNumber) {
+                            if (OperationAlreadyHappened) {
+                                setComputationText(buttonText);
+                                OperationAlreadyHappened = false;
+                            } else {
+                                setComputationText(computationText + buttonText);
+                            }
+                        } else if (buttonInfo.isOperator) {
+                            setComputationText(computationText + buttonText);
+                        } else if (buttonInfo.isDot) {
+                        } else if (buttonInfo.isOBracket) {
+                            setComputationText(computationText + buttonText);
+                            isOpened.add(true);
+                            System.out.println(isOpened.size());
+
+                        } else if (buttonInfo.isCBracket ) {
+                            // do nothing
+                        } else if (buttonInfo.isEquals) {
+                            // do nothing
+                        }
+                    if (stringInfo.isLastCharacterCBracket) {
+
+                        if (buttonInfo.isOperator) {
+                            setComputationText(computationText + buttonText);
+                        } else if (buttonInfo.isCBracket && !isOpened.isEmpty()) {
+                            setComputationText(computationText + buttonText);
+                            Object o = isOpened.get(isOpened.size());
+                            isOpened.remove(o);
+                        } else if (buttonInfo.isEquals) {
+                            while (!isOpened.isEmpty()) {
+                                setComputationText(computationText + ")");
+                                Object o = isOpened.get(isOpened.size()-1);
+                                isOpened.remove(o);
+                            }
+                            OperationAlreadyHappened = true;
+                            performComputation();
+                        }
+                    }
                     } else if (stringInfo.isLastCharacterOperator) {
 
                         if (buttonInfo.isNumber) {
@@ -74,6 +152,9 @@ public class Controller {
                             setComputationText(computationText.substring(0, stringInfo.lastCharIndex) + buttonText);
                         } else if (buttonInfo.isDot) {
                             setComputationText(computationText + buttonText);
+                        } else if (buttonInfo.isOBracket) {
+                            setComputationText(computationText + buttonText);
+                            isOpened.add(true);
                         } else if (buttonInfo.isEquals) {
                         } // do nothing
 

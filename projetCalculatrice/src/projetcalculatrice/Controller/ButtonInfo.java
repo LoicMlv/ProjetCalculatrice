@@ -8,6 +8,8 @@ public class ButtonInfo {
     boolean isNumber;
     boolean isClear;
     boolean isDelete;
+    boolean isOBracket;
+    boolean isCBracket;
 
     public ButtonInfo (String buttonText){
 
@@ -33,6 +35,9 @@ public class ButtonInfo {
             case "0" : isNumber = true; break;
 
             case "." :  isDot = true; break;
+
+            case "(" :  isOBracket = true; break;
+            case ")" :  isCBracket = true; break;
 
             case "+" : isOperator = true; break;
             case "-" :  isOperator = true; break;
@@ -70,5 +75,11 @@ public class ButtonInfo {
     public boolean isDelete() {
         return isDelete;
     }
+
+    public boolean isOBracket() {
+        return isOBracket;
+    }
+
+    public boolean isCBracket() { return isCBracket; }
 
 }
