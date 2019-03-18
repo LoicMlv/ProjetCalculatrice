@@ -9,6 +9,8 @@ public class StringInfo {
     boolean isLastCharacterOBracket;
     boolean isLastCharacterCBracket;
     int lastCharIndex;
+    int previousCharIndex;
+    boolean isPreviousCharOBracket;
 
     public StringInfo(String computationText){
 
@@ -22,7 +24,12 @@ public class StringInfo {
             isEmpty = true;
         } else {
             lastCharIndex = computationText.length()-1;
+            previousCharIndex = computationText.length()-2;
             String lastChar = computationText.substring(lastCharIndex);
+            String previousChar = computationText.substring(lastCharIndex);
+            if(previousChar.equals("(")){
+                isPreviousCharOBracket = true;
+            }
 
             switch(lastChar){
                 case "0" : isLastCharacterNumber = true; break;

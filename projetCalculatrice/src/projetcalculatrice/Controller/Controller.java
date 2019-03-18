@@ -49,7 +49,6 @@ public class Controller {
 
                 }else if (stringInfo.isLastCharacterCBracket()){
                     isOpened.add(true);
-                    System.out.println(isOpened.size());
 
                 }
                 model.Delete();return;}
@@ -62,7 +61,6 @@ public class Controller {
                     try{
                         setComputationText(computationText + buttonText);
                         isOpened.add(true);
-                        System.out.println(isOpened.size());
                     }catch(Exception ex){
                         ex.getMessage();
                     }
@@ -92,7 +90,6 @@ public class Controller {
                             setComputationText(computationText + buttonText);
                             Object o = isOpened.get(isOpened.size()-1);
                             isOpened.remove(o);
-                            System.out.println(isOpened.size());
 
                         } else if (buttonInfo.isEquals) {
                             while (!isOpened.isEmpty()) {
@@ -104,8 +101,7 @@ public class Controller {
                             performComputation();
                         }
                     }
-                    if (stringInfo.isLastCharacterOBracket) {
-
+                    else if (stringInfo.isLastCharacterOBracket) {
                         if (buttonInfo.isNumber) {
                             if (OperationAlreadyHappened) {
                                 setComputationText(buttonText);
@@ -114,42 +110,45 @@ public class Controller {
                                 setComputationText(computationText + buttonText);
                             }
                         } else if (buttonInfo.isOperator) {
-                            setComputationText(computationText + buttonText);
+                            if (buttonInfo.isSubstract){
+                                setComputationText(computationText + buttonText);
+                            }
                         } else if (buttonInfo.isDot) {
                         } else if (buttonInfo.isOBracket) {
                             setComputationText(computationText + buttonText);
                             isOpened.add(true);
                             System.out.println(isOpened.size());
 
-                        } else if (buttonInfo.isCBracket ) {
+                        } else if (buttonInfo.isCBracket) {
                             // do nothing
                         } else if (buttonInfo.isEquals) {
                             // do nothing
                         }
-                    if (stringInfo.isLastCharacterCBracket) {
-
-                        if (buttonInfo.isOperator) {
-                            setComputationText(computationText + buttonText);
-                        } else if (buttonInfo.isCBracket && !isOpened.isEmpty()) {
-                            setComputationText(computationText + buttonText);
-                            Object o = isOpened.get(isOpened.size());
-                            isOpened.remove(o);
-                        } else if (buttonInfo.isEquals) {
-                            while (!isOpened.isEmpty()) {
-                                setComputationText(computationText + ")");
-                                Object o = isOpened.get(isOpened.size()-1);
+                    } else if (stringInfo.isLastCharacterCBracket) {
+                            if (buttonInfo.isOperator) {
+                                setComputationText(computationText + buttonText);
+                            } else if (buttonInfo.isCBracket && !isOpened.isEmpty()) {
+                                setComputationText(computationText + buttonText);
+                                Object o = isOpened.get(isOpened.size());
                                 isOpened.remove(o);
+                            } else if (buttonInfo.isEquals) {
+                                while (!isOpened.isEmpty()) {
+                                    setComputationText(computationText + ")");
+                                    Object o = isOpened.get(isOpened.size() - 1);
+                                    isOpened.remove(o);
+                                }
+                                OperationAlreadyHappened = true;
+                                performComputation();
                             }
-                            OperationAlreadyHappened = true;
-                            performComputation();
                         }
-                    }
-                    } else if (stringInfo.isLastCharacterOperator) {
+                     else if (stringInfo.isLastCharacterOperator) {
 
                         if (buttonInfo.isNumber) {
                             setComputationText(computationText + buttonText);
                         } else if (buttonInfo.isOperator) {
-                            setComputationText(computationText.substring(0, stringInfo.lastCharIndex) + buttonText);
+                            if(stringInfo.isPreviousCharOBracket) {
+                                setComputationText(computationText.substring(0, stringInfo.lastCharIndex) + buttonText);
+                            }
                         } else if (buttonInfo.isDot) {
                             setComputationText(computationText + buttonText);
                         } else if (buttonInfo.isOBracket) {
