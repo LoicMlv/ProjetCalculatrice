@@ -110,7 +110,7 @@ public class Model extends Observable {
         String symbol2Convert;
         String symbol;
         String postSymbol;
-        boolean symbolCheck = false;
+        boolean symbolCheck = false; 
         boolean substractionCheck = false;
         if (currentInputString.length() > number2Convert.length()){
             // Récupération du symbole avant le dernier nombre pour savoir la conversion à faire
