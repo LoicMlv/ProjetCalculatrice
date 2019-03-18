@@ -161,6 +161,19 @@ public class Model extends Observable {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+        
+
         // On recréer la chaine de calcul avec la conversion effectuée
         currentInputString = postSymbol + symbol2Convert + number2Convert;
         setChanged();
