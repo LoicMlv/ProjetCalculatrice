@@ -16,17 +16,40 @@ public class Model extends Observable {
     }
 
     public void computeString() {
-
-        LinkedList<String> operationTokens = new StringParser(currentInputString).getTokens();
+        LinkedList<String> operationsTokens = new LinkedList<>();
+        LinkedList<String> opeTokens = new LinkedList<>();
 
         MathsOperationList possibleOperations = new MathsOperationList();
+        operationsTokens = new StringParser(currentInputString).getTokens();
+        String string = "";
+        if(currentInputString.contains("(")) {
 
-        operationTokens = performMathInSequence(operationTokens, possibleOperations);
+            for (int i=0; i<operationsTokens.size(); i++){
+                char c = operationsTokens.get(i).charAt(0);
 
-        boolean hasOnlyOneToken = (operationTokens.size() == 1);
+                if (!possibleOperations.contains(operationsTokens.get(i)) && !possibleOperations.contains(Character.toString(c)))  {
+                    opeTokens = new StringParser(operationsTokens.get(i)).getTokens();
+                    opeTokens = performMathInSequence(opeTokens, possibleOperations);
+                    operationsTokens.set(i, opeTokens.get(0));
+                }
+                string = string + operationsTokens.get(i) ;
+                System.out.println("string" + string);
+            }
+        }
+        else{
+            string = currentInputString;
+        }
+        for (String var : operationsTokens){
+            System.out.println(var);
+        }
+        operationsTokens = new StringParser(string).getTokens();
+        operationsTokens = performMathInSequence(operationsTokens, possibleOperations);
+
+
+        boolean hasOnlyOneToken = (operationsTokens.size() == 1);
 
         if (hasOnlyOneToken) {
-            setCurrentTotal(operationTokens.get(0));
+            setCurrentTotal(operationsTokens.get(0));
         } else {
             System.out.println("uhh.. something went wrong? LOL!");
         }
@@ -52,21 +75,21 @@ public class Model extends Observable {
 
                 String firstOperand = tokens.get(operatorIndex - 1);
                 String secondOperand = tokens.get(operatorIndex + 1);
-                float computationResult;
+                double computationResult;
 
                 // perform the relevant operation
                 switch (operation) {
-                    case "*":computationResult = Float.parseFloat(firstOperand)*Float.parseFloat(secondOperand);break;
-                    case "/":computationResult = Float.parseFloat(firstOperand)/Float.parseFloat(secondOperand);break;
-                    case "+":computationResult = Float.parseFloat(firstOperand)+Float.parseFloat(secondOperand);break;
-                    case "-":computationResult = Float.parseFloat(firstOperand)-Float.parseFloat(secondOperand);break;
-                    case "%":computationResult = Float.parseFloat(firstOperand)%Float.parseFloat(secondOperand);break;
-                    default:computationResult = (float) 69.69;
+                    case "*":computationResult = Double.parseDouble(firstOperand)*Double.parseDouble(secondOperand);break;
+                    case "/":computationResult = Double.parseDouble(firstOperand)/Double.parseDouble(secondOperand);break;
+                    case "+":computationResult = Double.parseDouble(firstOperand)+Double.parseDouble(secondOperand);break;
+                    case "-":computationResult = Double.parseDouble(firstOperand)-Double.parseDouble(secondOperand);break;
+                    case "%":computationResult = Double.parseDouble(firstOperand)%Double.parseDouble(secondOperand);break;
+                    default:computationResult =  69.69;
                         System.out.println("Cannot detect operation"); break;
                 }
 
                 // cast the operation back into a String
-                String tokenizedComputation = Float.toString(computationResult);
+                String tokenizedComputation = Double.toString(computationResult);
 
                 // remove all relevant tokens
                 tokens.remove(secondOperandIndex);
@@ -110,7 +133,7 @@ public class Model extends Observable {
         String symbol2Convert;
         String symbol;
         String postSymbol;
-        boolean symbolCheck = false; 
+        boolean symbolCheck = false;
         boolean substractionCheck = false;
         if (currentInputString.length() > number2Convert.length()){
             // Récupération du symbole avant le dernier nombre pour savoir la conversion à faire
@@ -158,22 +181,6 @@ public class Model extends Observable {
                 symbol2Convert += "-";
             }
         }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        
-
         // On recréer la chaine de calcul avec la conversion effectuée
         currentInputString = postSymbol + symbol2Convert + number2Convert;
         setChanged();
@@ -220,11 +227,10 @@ public class Model extends Observable {
     }
 
     public void setCurrentTotal(String newTotal) {
-        float floatTotal = Float.parseFloat(newTotal);
+        double doubleTotal = Double.parseDouble(newTotal);
+        int intTotal = (int) doubleTotal;
 
-        int intTotal = (int) floatTotal;
-
-        setCurrentTotalAsIntValueIfPossible(floatTotal, intTotal);
+        setCurrentTotalAsIntValueIfPossible(doubleTotal, intTotal);
 
         setChanged();
 
@@ -235,11 +241,11 @@ public class Model extends Observable {
 
     }
 
-    private void setCurrentTotalAsIntValueIfPossible(float floatTotal, int intTotal) {
-        if (floatTotal == intTotal) {
+    private void setCurrentTotalAsIntValueIfPossible(double doubleTotal, int intTotal) {
+        if (doubleTotal == intTotal) {
             currentTotal = Integer.toString(intTotal);
         } else {
-            currentTotal = Float.toString(floatTotal);
+            currentTotal = Double.toString(doubleTotal);
         }
     }
 

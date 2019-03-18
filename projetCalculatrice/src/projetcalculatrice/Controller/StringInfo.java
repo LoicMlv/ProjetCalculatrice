@@ -6,7 +6,11 @@ public class StringInfo {
     boolean isLastCharacterNumber;
     boolean isLastCharacterOperator;
     boolean isLastCharacterDot;
+    boolean isLastCharacterOBracket;
+    boolean isLastCharacterCBracket;
     int lastCharIndex;
+    int previousCharIndex;
+    boolean isPreviousCharOBracket;
 
     public StringInfo(String computationText){
 
@@ -20,7 +24,12 @@ public class StringInfo {
             isEmpty = true;
         } else {
             lastCharIndex = computationText.length()-1;
+            previousCharIndex = computationText.length()-2;
             String lastChar = computationText.substring(lastCharIndex);
+            String previousChar = computationText.substring(lastCharIndex);
+            if(previousChar.equals("(")){
+                isPreviousCharOBracket = true;
+            }
 
             switch(lastChar){
                 case "0" : isLastCharacterNumber = true; break;
@@ -34,6 +43,9 @@ public class StringInfo {
                 case "8" : isLastCharacterNumber = true; break;
                 case "9" : isLastCharacterNumber = true; break;
 
+                case "(" : isLastCharacterOBracket = true; break;
+                case ")" : isLastCharacterCBracket = true; break;
+
                 case "+" : isLastCharacterOperator= true; break;
                 case "-" : isLastCharacterOperator= true; break;
                 case "%" : isLastCharacterOperator= true; break;
@@ -41,6 +53,8 @@ public class StringInfo {
                 case "/" : isLastCharacterOperator= true; break;
 
                 case "." : isLastCharacterDot = true; break;
+
+
 
                 default : System.out.println("Cannot parse last character!");
 
@@ -67,6 +81,12 @@ public class StringInfo {
     public boolean isLastCharacterDot() {
         return isLastCharacterDot;
     }
+
+    public boolean isLastCharacterOBracket() {
+        return isLastCharacterOBracket;
+    }
+
+    public boolean isLastCharacterCBracket() { return isLastCharacterCBracket; }
 
     public int getLastCharIndex() {
         return lastCharIndex;
