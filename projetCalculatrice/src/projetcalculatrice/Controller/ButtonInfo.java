@@ -45,6 +45,11 @@ public class ButtonInfo {
             case "*" : isOperator = true; break;
             case "/" :  isOperator = true; break;
             case "%" : isOperator = true; break;
+            case "^(2)" : isOperator = true; break;
+            case "^(3)" : isOperator = true; break;
+            case "^(10)" : isOperator = true; break;
+            case "^(" : isOperator = true; break;
+
 
             case "=" : isEquals = true; break;
 

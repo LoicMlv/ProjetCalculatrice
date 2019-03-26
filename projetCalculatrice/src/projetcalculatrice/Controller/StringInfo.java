@@ -51,7 +51,7 @@ public class StringInfo {
                 case "%" : isLastCharacterOperator= true; break;
                 case "*" : isLastCharacterOperator= true; break;
                 case "/" : isLastCharacterOperator= true; break;
-
+                case "^" : isLastCharacterOperator= true; break;
                 case "." : isLastCharacterDot = true; break;
 
 

@@ -18,34 +18,42 @@ public class Model extends Observable {
 
     public void computeString() {
         LinkedList<String> operationsTokens = new LinkedList<>();
-        LinkedList<String> opeTokens = new LinkedList<>();
 
         MathsOperationList possibleOperations = new MathsOperationList();
         operationsTokens = new StringParser(currentInputString).getTokens();
+        operationsTokens.forEach(e -> System.out.println(e));
         String string = "";
+        // on verifie si le calcul comprend des parentheses
         if(currentInputString.contains("(")) {
-
             for (int i=0; i<operationsTokens.size(); i++){
-                char c = operationsTokens.get(i).charAt(0);
 
-                if (!possibleOperations.contains(operationsTokens.get(i)) && !possibleOperations.contains(Character.toString(c)))  {
+                // si l'element de operationsTokens n'est pas un operateur (+,-,* ...) on rentre dans le if
+                //rappel operationsTokens est du type 3+3
+                if (!possibleOperations.contains(operationsTokens.get(i)))  {
+                    LinkedList<String> opeTokens = new LinkedList<>();
+                    //on crée une liste de tokens à partir de la liste precedente pour differencier les nombres des operateurs
                     opeTokens = new StringParser(operationsTokens.get(i)).getTokens();
-                    opeTokens = performMathInSequence(opeTokens, possibleOperations);
-                    operationsTokens.set(i, opeTokens.get(0));
+
+                    //si le premier ou le dernier element de opeTokens n'est pas un operateur on rentre dans le if
+                    // rappel : opeTokens est du type 3 / + / 3
+                    if (!possibleOperations.contains(opeTokens.get(0)) && !possibleOperations.contains(opeTokens.get(opeTokens.size()-1))) {
+                        // on effectue le calcul à l'interieur des parentheses pour que l'ordre des priorites des calculs
+                        opeTokens = performMathInSequence(opeTokens, possibleOperations);
+                        operationsTokens.set(i, opeTokens.get(0));
+                    }
                 }
+                // on ajoute à une chaine de caractere en fonction des fonctions precedentes, un operateur ,un nombre
+                // ou une ensemble d'operateur + nombre
                 string = string + operationsTokens.get(i) ;
-                System.out.println("string" + string);
             }
         }
         else{
             string = currentInputString;
         }
-        for (String var : operationsTokens){
-            System.out.println(var);
-        }
         operationsTokens = new StringParser(string).getTokens();
-        operationsTokens = performMathInSequence(operationsTokens, possibleOperations);
+        System.out.println(operationsTokens);
 
+        operationsTokens = performMathInSequence(operationsTokens, possibleOperations);
 
         boolean hasOnlyOneToken = (operationsTokens.size() == 1);
 
@@ -67,7 +75,6 @@ public class Model extends Observable {
     private LinkedList<String> performOperations(String operation, LinkedList<String> tokens) {
 
         boolean isOperationCompleted = false;
-
         while (isOperationCompleted == false) {
             if (tokens.contains(operation)) {
                 int operatorIndex = tokens.indexOf(operation);
@@ -77,9 +84,9 @@ public class Model extends Observable {
                 String firstOperand = tokens.get(operatorIndex - 1);
                 String secondOperand = tokens.get(operatorIndex + 1);
                 double computationResult;
-
                 // perform the relevant operation
                 switch (operation) {
+                    case "^":computationResult = Math.pow(Double.parseDouble(firstOperand), Double.parseDouble(secondOperand));break;
                     case "*":computationResult = Double.parseDouble(firstOperand)*Double.parseDouble(secondOperand);break;
                     case "/":computationResult = Double.parseDouble(firstOperand)/Double.parseDouble(secondOperand);break;
                     case "+":computationResult = Double.parseDouble(firstOperand)+Double.parseDouble(secondOperand);break;
