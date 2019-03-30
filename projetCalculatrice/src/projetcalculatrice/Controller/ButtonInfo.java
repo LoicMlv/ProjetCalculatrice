@@ -12,6 +12,8 @@ public class ButtonInfo {
     boolean isOBracket;
     boolean isCBracket;
     boolean isSubstract;
+    boolean isOperation;
+    boolean isPi;
 
     public ButtonInfo (String buttonText){
 
@@ -35,6 +37,7 @@ public class ButtonInfo {
             case "8" : isNumber = true; break;
             case "9" : isNumber = true; break;
             case "0" : isNumber = true; break;
+            case "PI" : isPi = true; break;
 
             case "." :  isDot = true; break;
 
@@ -46,6 +49,27 @@ public class ButtonInfo {
             case "*" : isOperator = true; break;
             case "/" :  isOperator = true; break;
             case "%" : isOperator = true; break;
+            case "^(2)" : isOperator = true; break;
+            case "^(3)" : isOperator = true; break;
+            case "^(10)" : isOperator = true; break;
+            case "^(" : isOperator = true; break;
+            case  "^(1/2)" : isOperator = true; break;
+            case  "^(1/3)" : isOperator = true; break;
+            case  "^(1/" : isOperator = true; break;
+            case  "*10^" : isOperator = true; break;
+
+            case "SIN" : isOperation = true; break;
+            case "COS" : isOperation = true; break;
+            case "TAN" : isOperation = true; break;
+            case "ASI" : isOperation = true; break;
+            case "ACO" : isOperation = true; break;
+            case "ATA" : isOperation = true; break;
+            case "!" : isOperation = true; break;
+            case "e" : isOperation = true; break;
+            case "log" : isOperation = true; break;
+            case "ln" : isOperation = true; break;
+
+
 
             case "+/-": isConversion = true; break;
 
@@ -59,6 +83,8 @@ public class ButtonInfo {
     public boolean isNumber() {
         return isNumber;
     }
+
+    public boolean isOperation() { return isOperation; }
 
     public boolean isOperator() {
         return isOperator;
@@ -87,5 +113,8 @@ public class ButtonInfo {
     }
 
     public boolean isCBracket() { return isCBracket; }
+
+    public boolean isPi() { return isPi; }
+
 
 }

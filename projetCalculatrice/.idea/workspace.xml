@@ -3,19 +3,16 @@
   <component name="ChangeListManager">
     <list default="true" id="9c87131e-4dcc-4e44-9015-1514c0225e64" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-<<<<<<< HEAD
-      <change beforePath="$PROJECT_DIR$/src/projetcalculatrice/Model/Model.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/projetcalculatrice/Model/Model.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/projetcalculatrice/View.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/projetcalculatrice/View.java" afterDir="false" />
-=======
       <change beforePath="$PROJECT_DIR$/out/production/projetCalculatrice/projetcalculatrice/Controller/Controller$CalcButtonListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/projetCalculatrice/projetcalculatrice/Controller/Controller$CalcButtonListener.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/projetCalculatrice/projetcalculatrice/Model/Model.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/projetCalculatrice/projetcalculatrice/Model/Model.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/projetCalculatrice/projetcalculatrice/Model/StringParser.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/projetCalculatrice/projetcalculatrice/Model/StringParser.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/projetcalculatrice/Controller/ButtonInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/projetcalculatrice/Controller/ButtonInfo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/projetcalculatrice/Controller/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/projetcalculatrice/Controller/Controller.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/projetcalculatrice/Controller/StringInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/projetcalculatrice/Controller/StringInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/projetcalculatrice/Model/MathsTrigoOperationsList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/projetcalculatrice/Model/MathsTrigoOperationsList.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/projetcalculatrice/Model/Model.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/projetcalculatrice/Model/Model.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/projetcalculatrice/Model/StringParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/projetcalculatrice/Model/StringParser.java" afterDir="false" />
->>>>>>> tachess1
+      <change beforePath="$PROJECT_DIR$/src/projetcalculatrice/View.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/projetcalculatrice/View.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -29,13 +26,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/projetcalculatrice/View.java">
           <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
-            <state relative-caret-position="321">
-              <caret line="185" column="41" selection-start-line="185" selection-start-column="41" selection-end-line="185" selection-end-column="41" />
-=======
-            <state>
-              <caret line="146" column="22" selection-start-line="146" selection-start-column="22" selection-end-line="146" selection-end-column="22" />
->>>>>>> tachess1
+            <state relative-caret-position="315">
+              <caret line="212" column="41" lean-forward="true" selection-start-line="212" selection-start-column="41" selection-end-line="212" selection-end-column="41" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -43,61 +35,14 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/projetcalculatrice/Model/Model.java">
           <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
-            <state relative-caret-position="344">
-              <caret line="132" column="67" selection-start-line="132" selection-start-column="67" selection-end-line="132" selection-end-column="67" />
-=======
-            <state>
-              <caret line="19" selection-start-line="19" selection-end-line="19" />
->>>>>>> tachess1
+            <state relative-caret-position="669">
+              <caret line="180" column="30" lean-forward="true" selection-start-line="180" selection-start-column="30" selection-end-line="180" selection-end-column="30" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/projetcalculatrice/Run.java">
-          <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
-            <state relative-caret-position="345">
-              <caret line="19" selection-start-line="19" selection-end-line="19" />
-=======
-            <state relative-caret-position="184">
-              <caret line="38" column="9" lean-forward="true" selection-start-line="38" selection-start-column="9" selection-end-line="38" selection-end-column="9" />
->>>>>>> tachess1
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-<<<<<<< HEAD
-        <entry file="file://$PROJECT_DIR$/src/projetcalculatrice/Model/CalcDisplayData.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="138">
-              <caret line="6" selection-start-line="6" selection-end-line="6" />
-=======
-        <entry file="file://$PROJECT_DIR$/src/projetcalculatrice/Model/MathsOperationList.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="207">
-              <caret line="12" column="8" selection-start-line="12" selection-start-column="8" selection-end-line="12" selection-end-column="8" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/projetcalculatrice/Model/CalcDisplayData.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="24">
-              <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
->>>>>>> tachess1
             </state>
           </provider>
         </entry>
@@ -105,63 +50,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/projetcalculatrice/Model/StringParser.java">
           <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
-            <state relative-caret-position="483">
-              <caret line="25" column="55" selection-start-line="25" selection-start-column="55" selection-end-line="25" selection-end-column="55" />
-=======
-            <state relative-caret-position="215">
-              <caret line="90" column="9" selection-start-line="90" selection-start-column="9" selection-end-line="90" selection-end-column="9" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#730#731#0" expanded="true" />
-              </folding>
->>>>>>> tachess1
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/projetcalculatrice/Controller/Controller.java">
-          <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
-            <state relative-caret-position="805">
-              <caret line="42" column="1" selection-start-line="42" selection-start-column="1" selection-end-line="42" selection-end-column="1" />
-              <folding>
-                <element signature="imports" expanded="true" />
-=======
-            <state relative-caret-position="-69">
-              <caret line="29" column="37" selection-start-line="29" selection-start-column="37" selection-end-line="29" selection-end-column="37" />
-              <folding>
-                <element signature="e#2347#2348#0" expanded="true" />
-                <element signature="e#2438#2439#0" expanded="true" />
-                <element signature="e#2532#2533#0" expanded="true" />
-                <element signature="e#2616#2617#0" expanded="true" />
-                <element signature="e#2710#2711#0" expanded="true" />
-                <element signature="e#2865#2866#0" expanded="true" />
->>>>>>> tachess1
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-<<<<<<< HEAD
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/projetcalculatrice/Controller/ButtonInfo.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="38" column="49" selection-start-line="38" selection-start-column="49" selection-end-line="38" selection-end-column="49" />
-=======
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/projetcalculatrice/Controller/Controller.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="57" column="91" selection-start-line="57" selection-start-column="91" selection-end-line="57" selection-end-column="91" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#7939#7940#0" expanded="true" />
-                <element signature="e#8049#8050#0" expanded="true" />
-              </folding>
->>>>>>> tachess1
+            <state relative-caret-position="269">
+              <caret line="46" column="92" selection-start-line="46" selection-start-column="92" selection-end-line="46" selection-end-column="92" />
             </state>
           </provider>
         </entry>
@@ -169,13 +59,82 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/projetcalculatrice/Controller/StringInfo.java">
           <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
-            <state relative-caret-position="1196">
-              <caret line="52" selection-start-line="52" selection-end-line="52" />
-=======
+            <state relative-caret-position="614">
+              <caret line="82" column="55" selection-start-line="82" selection-start-column="55" selection-end-line="82" selection-end-column="55" />
+              <folding>
+                <element signature="e#3589#3590#0" expanded="true" />
+                <element signature="e#3619#3620#0" expanded="true" />
+                <element signature="e#3666#3667#0" expanded="true" />
+                <element signature="e#3710#3711#0" expanded="true" />
+                <element signature="e#3758#3759#0" expanded="true" />
+                <element signature="e#3804#3805#0" expanded="true" />
+                <element signature="e#3847#3848#0" expanded="true" />
+                <element signature="e#3888#3889#0" expanded="true" />
+                <element signature="e#3936#3937#0" expanded="true" />
+                <element signature="e#3982#3983#0" expanded="true" />
+                <element signature="e#4169#4170#0" expanded="true" />
+                <element signature="e#4205#4206#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/projetcalculatrice/Model/MathsOperationList.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="92">
+              <caret line="7" column="16" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/projetcalculatrice/Model/MathsTrigoOperationsList.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="246">
+              <caret line="17" column="19" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/projetcalculatrice/Model/CalcDisplayData.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-99">
+              <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/projetcalculatrice/Model/NumberList.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="39">
+              <caret line="8" column="17" lean-forward="true" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/projetcalculatrice/Controller/Controller.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="154">
+              <caret line="176" column="46" selection-start-line="176" selection-start-column="46" selection-end-line="176" selection-end-column="46" />
+              <folding>
+                <element signature="e#10891#10892#0" expanded="true" />
+                <element signature="e#10936#10937#0" expanded="true" />
+                <element signature="e#10992#10993#0" expanded="true" />
+                <element signature="e#11046#11047#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/projetcalculatrice/Controller/ButtonInfo.java">
+          <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="115">
-              <caret line="43" column="42" selection-start-line="43" selection-start-column="42" selection-end-line="43" selection-end-column="42" />
->>>>>>> tachess1
+              <caret line="69" lean-forward="true" selection-start-line="69" selection-end-line="69" />
             </state>
           </provider>
         </entry>
@@ -196,10 +155,6 @@
       <find>BUTTON TYPE</find>
       <find>comput</find>
       <find>clear</find>
-<<<<<<< HEAD
-      <find>BUTTON TYPE NOT FOUND</find>
-      <find>isDele</find>
-=======
       <find>size</find>
       <find>flo</find>
       <find>ext</find>
@@ -207,7 +162,10 @@
       <find>stringPa</find>
       <find>setCurrentTotalAsIntValueIfPossible</find>
       <find>setCurrentTotal</find>
->>>>>>> tachess1
+      <find>system.out</find>
+      <find>system</find>
+      <find>setwin</find>
+      <find>totalDisplay</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -228,18 +186,15 @@
         <option value="$PROJECT_DIR$/src/projetcalculatrice/Model/CalcDisplayData.java" />
         <option value="$PROJECT_DIR$/src/projetcalculatrice/Run.java" />
         <option value="$PROJECT_DIR$/src/projetcalculatrice/View.form" />
+        <option value="$PROJECT_DIR$/src/projetcalculatrice/Model/NumberList.java" />
         <option value="$PROJECT_DIR$/src/projetcalculatrice/Model/MathsOperationList.java" />
         <option value="$PROJECT_DIR$/src/projetcalculatrice/View.java" />
         <option value="$PROJECT_DIR$/src/projetcalculatrice/Controller/ButtonInfo.java" />
-<<<<<<< HEAD
-        <option value="$PROJECT_DIR$/src/projetcalculatrice/View.java" />
+        <option value="$PROJECT_DIR$/src/projetcalculatrice/Model/MathsTrigoOperationsList.java" />
         <option value="$PROJECT_DIR$/src/projetcalculatrice/Model/Model.java" />
-=======
         <option value="$PROJECT_DIR$/src/projetcalculatrice/Controller/StringInfo.java" />
         <option value="$PROJECT_DIR$/src/projetcalculatrice/Model/StringParser.java" />
-        <option value="$PROJECT_DIR$/src/projetcalculatrice/Model/Model.java" />
         <option value="$PROJECT_DIR$/src/projetcalculatrice/Controller/Controller.java" />
->>>>>>> tachess1
       </list>
     </option>
   </component>
@@ -256,11 +211,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-<<<<<<< HEAD
-      <pane id="Scope" />
-=======
       <pane id="PackagesPane" />
->>>>>>> tachess1
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -297,27 +249,19 @@
           <select />
         </subPane>
       </pane>
-<<<<<<< HEAD
-      <pane id="PackagesPane" />
-=======
-      <pane id="Scope" />
->>>>>>> tachess1
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH" value="303" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-<<<<<<< HEAD
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1551888702656" />
-=======
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552401086885" />
->>>>>>> tachess1
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553622767080" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
+    <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RunDashboard">
@@ -367,10 +311,6 @@
     </task>
     <servers />
   </component>
-<<<<<<< HEAD
-  <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11814000" />
-=======
   <component name="TodoView">
     <todo-panel id="selected-file">
       <is-autoscroll-to-source value="true" />
@@ -379,17 +319,12 @@
       <are-packages-shown value="true" />
       <is-autoscroll-to-source value="true" />
     </todo-panel>
->>>>>>> tachess1
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="878" extended-state="6" />
     <editor active="true" />
     <layout>
-<<<<<<< HEAD
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.28590605" />
-=======
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.28744328" />
->>>>>>> tachess1
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15279879" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -398,11 +333,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-<<<<<<< HEAD
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.2777778" />
-=======
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.2786325" />
->>>>>>> tachess1
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.2786325" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -410,13 +341,7 @@
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.32991454" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="9" />
-<<<<<<< HEAD
-      <window_info anchor="bottom" id="Messages" order="10" />
-      <window_info anchor="bottom" id="Docker" order="11" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Database Changes" order="12" />
-=======
-      <window_info anchor="bottom" id="Messages" order="10" weight="0.32991454" />
->>>>>>> tachess1
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.2717949" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -509,28 +434,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/projetcalculatrice/View.java">
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
       <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
-        <state relative-caret-position="345">
-          <caret line="19" selection-start-line="19" selection-end-line="19" />
-=======
-        <state>
-          <caret line="146" column="22" selection-start-line="146" selection-start-column="22" selection-end-line="146" selection-end-column="22" />
->>>>>>> tachess1
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="315">
+          <caret line="102" column="20" selection-start-line="102" selection-start-column="20" selection-end-line="102" selection-end-column="20" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/projetcalculatrice/Run.java">
       <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
-        <state relative-caret-position="138">
-          <caret line="6" selection-start-line="6" selection-end-line="6" />
-=======
-        <state>
+        <state relative-caret-position="345">
           <caret line="19" selection-start-line="19" selection-end-line="19" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -538,110 +451,98 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/projetcalculatrice/Controller/ButtonInfo.java">
+    <entry file="file://$PROJECT_DIR$/src/projetcalculatrice/View.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="43" column="42" selection-start-line="43" selection-start-column="42" selection-end-line="43" selection-end-column="42" />
->>>>>>> tachess1
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/projetcalculatrice/Model/CalcDisplayData.java">
-      <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
-        <state relative-caret-position="483">
-          <caret line="25" column="55" selection-start-line="25" selection-start-column="55" selection-end-line="25" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/projetcalculatrice/Controller/Controller.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="805">
-          <caret line="42" column="1" selection-start-line="42" selection-start-column="1" selection-end-line="42" selection-end-column="1" />
-=======
-        <state relative-caret-position="24">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/projetcalculatrice/Controller/StringInfo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-69">
-          <caret line="29" column="37" selection-start-line="29" selection-start-column="37" selection-end-line="29" selection-end-column="37" />
+        <state relative-caret-position="315">
+          <caret line="212" column="41" lean-forward="true" selection-start-line="212" selection-start-column="41" selection-end-line="212" selection-end-column="41" />
           <folding>
-            <element signature="e#2347#2348#0" expanded="true" />
-            <element signature="e#2438#2439#0" expanded="true" />
-            <element signature="e#2532#2533#0" expanded="true" />
-            <element signature="e#2616#2617#0" expanded="true" />
-            <element signature="e#2710#2711#0" expanded="true" />
-            <element signature="e#2865#2866#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/projetcalculatrice/Model/StringParser.java">
+    <entry file="file://$PROJECT_DIR$/src/projetcalculatrice/Model/Model.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="215">
-          <caret line="90" column="9" selection-start-line="90" selection-start-column="9" selection-end-line="90" selection-end-column="9" />
->>>>>>> tachess1
+        <state relative-caret-position="669">
+          <caret line="180" column="30" lean-forward="true" selection-start-line="180" selection-start-column="30" selection-end-line="180" selection-end-column="30" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#730#731#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/projetcalculatrice/Model/MathsOperationList.java">
       <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
-        <state relative-caret-position="1196">
-          <caret line="52" selection-start-line="52" selection-end-line="52" />
+        <state relative-caret-position="92">
+          <caret line="7" column="16" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/projetcalculatrice/Model/CalcDisplayData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-99">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/projetcalculatrice/Model/NumberList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="39">
+          <caret line="8" column="17" lean-forward="true" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/projetcalculatrice/Controller/ButtonInfo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="38" column="49" selection-start-line="38" selection-start-column="49" selection-end-line="38" selection-end-column="49" />
+        <state relative-caret-position="115">
+          <caret line="69" lean-forward="true" selection-start-line="69" selection-end-line="69" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/projetcalculatrice/View.java">
+    <entry file="file://$PROJECT_DIR$/src/projetcalculatrice/Model/StringParser.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="321">
-          <caret line="185" column="41" selection-start-line="185" selection-start-column="41" selection-end-line="185" selection-end-column="41" />
-=======
-        <state relative-caret-position="207">
-          <caret line="12" column="8" selection-start-line="12" selection-start-column="8" selection-end-line="12" selection-end-column="8" />
+        <state relative-caret-position="269">
+          <caret line="46" column="92" selection-start-line="46" selection-start-column="92" selection-end-line="46" selection-end-column="92" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/projetcalculatrice/Model/Model.java">
+    <entry file="file://$PROJECT_DIR$/src/projetcalculatrice/Controller/StringInfo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="38" column="9" lean-forward="true" selection-start-line="38" selection-start-column="9" selection-end-line="38" selection-end-column="9" />
->>>>>>> tachess1
+        <state relative-caret-position="614">
+          <caret line="82" column="55" selection-start-line="82" selection-start-column="55" selection-end-line="82" selection-end-column="55" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#3589#3590#0" expanded="true" />
+            <element signature="e#3619#3620#0" expanded="true" />
+            <element signature="e#3666#3667#0" expanded="true" />
+            <element signature="e#3710#3711#0" expanded="true" />
+            <element signature="e#3758#3759#0" expanded="true" />
+            <element signature="e#3804#3805#0" expanded="true" />
+            <element signature="e#3847#3848#0" expanded="true" />
+            <element signature="e#3888#3889#0" expanded="true" />
+            <element signature="e#3936#3937#0" expanded="true" />
+            <element signature="e#3982#3983#0" expanded="true" />
+            <element signature="e#4169#4170#0" expanded="true" />
+            <element signature="e#4205#4206#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-<<<<<<< HEAD
-    <entry file="file://$PROJECT_DIR$/src/projetcalculatrice/Model/Model.java">
+    <entry file="file://$PROJECT_DIR$/src/projetcalculatrice/Model/MathsTrigoOperationsList.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="344">
-          <caret line="132" column="67" selection-start-line="132" selection-start-column="67" selection-end-line="132" selection-end-column="67" />
-=======
+        <state relative-caret-position="246">
+          <caret line="17" column="19" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/projetcalculatrice/Controller/Controller.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="57" column="91" selection-start-line="57" selection-start-column="91" selection-end-line="57" selection-end-column="91" />
->>>>>>> tachess1
+        <state relative-caret-position="154">
+          <caret line="176" column="46" selection-start-line="176" selection-start-column="46" selection-end-line="176" selection-end-column="46" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#7939#7940#0" expanded="true" />
-            <element signature="e#8049#8050#0" expanded="true" />
+            <element signature="e#10891#10892#0" expanded="true" />
+            <element signature="e#10936#10937#0" expanded="true" />
+            <element signature="e#10992#10993#0" expanded="true" />
+            <element signature="e#11046#11047#0" expanded="true" />
           </folding>
         </state>
       </provider>
