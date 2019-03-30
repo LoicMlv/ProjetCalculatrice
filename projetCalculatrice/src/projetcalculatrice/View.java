@@ -16,6 +16,7 @@ import projetcalculatrice.Model.*;
 
 public class View extends JFrame implements Observer {
 
+
     private JTextField totalDisplay;
     private JTextField computationDisplay;
     private ArrayList <JButton> buttonList;
@@ -169,9 +170,45 @@ public class View extends JFrame implements Observer {
         gbc.gridx = 1;
         add(buttonRetriever.next(), gbc);
 
+        gbc.gridx = 2;
+        add(buttonRetriever.next(), gbc);
+        gbc.gridx = 3;
+        add(buttonRetriever.next(), gbc);
 
+        //last row, e button
+        gbc.gridx = 0;
+        gbc.gridy = 9;
+        add(buttonRetriever.next(), gbc);
 
+        gbc.gridx = 1;
+        add(buttonRetriever.next(), gbc);
 
+        gbc.gridx = 2;
+        add(buttonRetriever.next(), gbc);
+
+        gbc.gridx = 3;
+        add(buttonRetriever.next(), gbc);
+
+        //last row, e button
+        gbc.gridx = 0;
+        gbc.gridy = 10;
+        add(buttonRetriever.next(), gbc);
+
+        gbc.gridx = 1;
+        add(buttonRetriever.next(), gbc);
+
+        gbc.gridx = 2;
+        add(buttonRetriever.next(), gbc);
+
+        gbc.gridx = 3;
+        add(buttonRetriever.next(), gbc);
+
+        gbc.gridx = 0;
+        gbc.gridy = 11;
+        add(buttonRetriever.next(), gbc);
+
+        gbc.gridx = 1;
+        add(buttonRetriever.next(), gbc);
 
     }
 
@@ -203,7 +240,18 @@ public class View extends JFrame implements Observer {
         buttonList.add(new JButton("^(3)"));
         buttonList.add(new JButton("^(10)"));
         buttonList.add(new JButton("^("));
-
+        buttonList.add(new JButton("^(1/2)"));
+        buttonList.add(new JButton("^(1/3)"));
+        buttonList.add(new JButton("^(1/"));
+        buttonList.add(new JButton("SIN"));
+        buttonList.add(new JButton("COS"));
+        buttonList.add(new JButton("TAN"));
+        buttonList.add(new JButton("ASI"));
+        buttonList.add(new JButton("ACO"));
+        buttonList.add(new JButton("ATA"));
+        buttonList.add(new JButton("PI"));
+        buttonList.add(new JButton("*10^"));
+        buttonList.add(new JButton("!"));
 
     }
 
@@ -214,7 +262,7 @@ public class View extends JFrame implements Observer {
         totalDisplay.setText("0");
         totalDisplay.setHorizontalAlignment(JTextField.CENTER);
 
-        Font newFont = new Font("SansSerif", Font.PLAIN, 40);
+        Font newFont = new Font("SansSerif", Font.PLAIN, 20);
         totalDisplay.setFont(newFont);
     }
 

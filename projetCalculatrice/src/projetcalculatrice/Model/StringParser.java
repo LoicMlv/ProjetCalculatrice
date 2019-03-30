@@ -39,27 +39,25 @@ public class StringParser {
                 linkedTokens.add(token);
             }
         }
-
         return linkedTokens;
     }
 
     private List<String> extractTokens(String string) {
         String[] tokens = string
-                .split(String.format(WITH_DELIMITERS, "[*^/%+-]"));
+                .split(String.format(WITH_DELIMITERS, "PI|ASI|ACO|ATA|SIN|COS|TAN|[*^!/%+-]"));
         List<String> linkedTokens = new ArrayList<>();
         MathsOperationList possibleOperations = new MathsOperationList();
-
         // on regarde dans la liste des tokens si un "-" est utilsié dans un calcul ou pour ne nombre negatif
         for (int j = 0; j < tokens.length; j++) {
-
             if(j!=0){
-                if (tokens[j].equals("-") && tokens[j-1].equals("(")) {
+                if (tokens[j].equals("-") && !Character.isDigit(tokens[j-1].charAt(0))) {
                     linkedTokens.add(tokens[j].toString() + tokens[j + 1].toString());
                     j+=1;
                 } else {
                     linkedTokens.add(tokens[j]);
                 }
             }else{
+
                 if (tokens[j].equals("-")) {
                     linkedTokens.add(tokens[j].toString() + tokens[j + 1].toString());
                     j+=1;
@@ -68,7 +66,6 @@ public class StringParser {
                 }
             }
         }
-
         return linkedTokens;
     }
 

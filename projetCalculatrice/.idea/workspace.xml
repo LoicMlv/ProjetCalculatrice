@@ -2,20 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9c87131e-4dcc-4e44-9015-1514c0225e64" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/projetcalculatrice/Model/NumberList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/projetcalculatrice/Model/MathsTrigoOperationsList.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/projetCalculatrice/projetcalculatrice/Controller/ButtonInfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/projetCalculatrice/projetcalculatrice/Controller/ButtonInfo.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/projetCalculatrice/projetcalculatrice/Controller/Controller$CalcButtonListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/projetCalculatrice/projetcalculatrice/Controller/Controller$CalcButtonListener.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/projetCalculatrice/projetcalculatrice/Controller/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/projetCalculatrice/projetcalculatrice/Controller/Controller.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/projetCalculatrice/projetcalculatrice/Controller/StringInfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/projetCalculatrice/projetcalculatrice/Controller/StringInfo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/projetCalculatrice/projetcalculatrice/Model/MathsOperationList.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/projetCalculatrice/projetcalculatrice/Model/MathsOperationList.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/projetCalculatrice/projetcalculatrice/Model/Model.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/projetCalculatrice/projetcalculatrice/Model/Model.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/projetCalculatrice/projetcalculatrice/Model/StringParser.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/projetCalculatrice/projetcalculatrice/Model/StringParser.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/projetCalculatrice/projetcalculatrice/View.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/projetCalculatrice/projetcalculatrice/View.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/projetcalculatrice/Controller/ButtonInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/projetcalculatrice/Controller/ButtonInfo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/projetcalculatrice/Controller/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/projetcalculatrice/Controller/Controller.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/projetcalculatrice/Controller/StringInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/projetcalculatrice/Controller/StringInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/projetcalculatrice/Model/MathsOperationList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/projetcalculatrice/Model/MathsOperationList.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/projetcalculatrice/Model/Model.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/projetcalculatrice/Model/Model.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/projetcalculatrice/Model/StringParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/projetcalculatrice/Model/StringParser.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/projetcalculatrice/View.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/projetcalculatrice/View.java" afterDir="false" />
@@ -32,8 +29,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/projetcalculatrice/View.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="110">
-              <caret line="220" column="41" lean-forward="true" selection-start-line="220" selection-start-column="41" selection-end-line="220" selection-end-column="41" />
+            <state relative-caret-position="5543">
+              <caret line="253" column="37" selection-start-line="253" selection-start-column="37" selection-end-line="253" selection-end-column="37" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -42,49 +39,25 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/projetcalculatrice/Run.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="345">
+              <caret line="19" selection-start-line="19" selection-end-line="19" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/projetcalculatrice/Model/Model.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="269">
-              <caret line="53" column="43" selection-start-line="53" selection-start-column="43" selection-end-line="53" selection-end-column="43" />
+            <state relative-caret-position="54">
+              <caret line="34" column="80" selection-start-line="34" selection-start-column="80" selection-end-line="34" selection-end-column="80" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="384">
-              <caret line="105" column="20" selection-start-line="105" selection-start-column="20" selection-end-line="105" selection-end-column="20" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/projetcalculatrice/Model/MathsOperationList.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="223">
-              <caret line="11" column="17" lean-forward="true" selection-end-line="16" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/projetcalculatrice/Model/NumberList.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="39">
-              <caret line="8" column="17" lean-forward="true" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/projetcalculatrice/Model/CalcDisplayData.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-99">
-              <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -92,8 +65,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/projetcalculatrice/Model/StringParser.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="207">
-              <caret line="58" column="24" lean-forward="true" selection-start-line="58" selection-start-column="24" selection-end-line="58" selection-end-column="24" />
+            <state relative-caret-position="154">
+              <caret line="50" column="49" selection-start-line="50" selection-start-column="49" selection-end-line="50" selection-end-column="49" />
             </state>
           </provider>
         </entry>
@@ -101,20 +74,63 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/projetcalculatrice/Controller/StringInfo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="736">
-              <caret line="53" column="23" selection-start-line="53" selection-start-column="23" selection-end-line="53" selection-end-column="23" />
+            <state relative-caret-position="1725">
+              <caret line="75" column="52" selection-start-line="75" selection-start-column="52" selection-end-line="75" selection-end-column="52" />
+              <folding>
+                <element signature="e#3589#3590#0" expanded="true" />
+                <element signature="e#3619#3620#0" expanded="true" />
+                <element signature="e#3666#3667#0" expanded="true" />
+                <element signature="e#3710#3711#0" expanded="true" />
+                <element signature="e#3758#3759#0" expanded="true" />
+                <element signature="e#3804#3805#0" expanded="true" />
+                <element signature="e#3847#3848#0" expanded="true" />
+                <element signature="e#3888#3889#0" expanded="true" />
+                <element signature="e#3936#3937#0" expanded="true" />
+                <element signature="e#3982#3983#0" expanded="true" />
+                <element signature="e#4169#4170#0" expanded="true" />
+                <element signature="e#4205#4206#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/projetcalculatrice/Model/MathsOperationList.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="161">
+              <caret line="7" column="16" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/projetcalculatrice/Model/MathsTrigoOperationsList.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="322">
+              <caret line="14" column="17" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/projetcalculatrice/Model/CalcDisplayData.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="46">
+              <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/projetcalculatrice/Controller/Controller.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="154">
-              <caret line="99" column="54" lean-forward="true" selection-start-line="99" selection-start-column="54" selection-end-line="99" selection-end-column="54" />
+            <state relative-caret-position="690">
+              <caret line="40" selection-start-line="40" selection-end-line="40" />
               <folding>
-                <element signature="e#8928#8929#0" expanded="true" />
-                <element signature="e#9038#9039#0" expanded="true" />
+                <element signature="e#10891#10892#0" expanded="true" />
+                <element signature="e#10936#10937#0" expanded="true" />
+                <element signature="e#10992#10993#0" expanded="true" />
+                <element signature="e#11046#11047#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -123,8 +139,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/projetcalculatrice/Controller/ButtonInfo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="184">
-              <caret line="50" column="20" selection-start-line="50" selection-start-column="20" selection-end-line="50" selection-end-column="20" />
+            <state relative-caret-position="1541">
+              <caret line="67" selection-start-line="67" selection-end-line="67" />
             </state>
           </provider>
         </entry>
@@ -155,6 +171,7 @@
       <find>system.out</find>
       <find>system</find>
       <find>setwin</find>
+      <find>totalDisplay</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -175,14 +192,15 @@
         <option value="$PROJECT_DIR$/src/projetcalculatrice/Model/CalcDisplayData.java" />
         <option value="$PROJECT_DIR$/src/projetcalculatrice/Run.java" />
         <option value="$PROJECT_DIR$/src/projetcalculatrice/View.form" />
-        <option value="$PROJECT_DIR$/src/projetcalculatrice/Controller/StringInfo.java" />
-        <option value="$PROJECT_DIR$/src/projetcalculatrice/Controller/ButtonInfo.java" />
-        <option value="$PROJECT_DIR$/src/projetcalculatrice/View.java" />
-        <option value="$PROJECT_DIR$/src/projetcalculatrice/Model/StringParser.java" />
-        <option value="$PROJECT_DIR$/src/projetcalculatrice/Model/Model.java" />
-        <option value="$PROJECT_DIR$/src/projetcalculatrice/Model/MathsOperationList.java" />
         <option value="$PROJECT_DIR$/src/projetcalculatrice/Model/NumberList.java" />
         <option value="$PROJECT_DIR$/src/projetcalculatrice/Controller/Controller.java" />
+        <option value="$PROJECT_DIR$/src/projetcalculatrice/View.java" />
+        <option value="$PROJECT_DIR$/src/projetcalculatrice/Controller/ButtonInfo.java" />
+        <option value="$PROJECT_DIR$/src/projetcalculatrice/Model/MathsOperationList.java" />
+        <option value="$PROJECT_DIR$/src/projetcalculatrice/Model/MathsTrigoOperationsList.java" />
+        <option value="$PROJECT_DIR$/src/projetcalculatrice/Controller/StringInfo.java" />
+        <option value="$PROJECT_DIR$/src/projetcalculatrice/Model/StringParser.java" />
+        <option value="$PROJECT_DIR$/src/projetcalculatrice/Model/Model.java" />
       </list>
     </option>
   </component>
@@ -200,6 +218,7 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -236,14 +255,13 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH" value="303" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553598859391" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553622767080" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
@@ -309,7 +327,7 @@
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1505295" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15279879" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -420,6 +438,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/projetcalculatrice/Model/NumberList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="39">
+          <caret line="8" column="17" lean-forward="true" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="102" column="20" selection-start-line="102" selection-start-column="20" selection-end-line="102" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/projetcalculatrice/View.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5543">
+          <caret line="253" column="37" selection-start-line="253" selection-start-column="37" selection-end-line="253" selection-end-column="37" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/projetcalculatrice/Run.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="345">
@@ -430,82 +472,81 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/projetcalculatrice/View.java">
+    <entry file="file://$PROJECT_DIR$/src/projetcalculatrice/Controller/StringInfo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="220" column="41" lean-forward="true" selection-start-line="220" selection-start-column="41" selection-end-line="220" selection-end-column="41" />
+        <state relative-caret-position="1725">
+          <caret line="75" column="52" selection-start-line="75" selection-start-column="52" selection-end-line="75" selection-end-column="52" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#3589#3590#0" expanded="true" />
+            <element signature="e#3619#3620#0" expanded="true" />
+            <element signature="e#3666#3667#0" expanded="true" />
+            <element signature="e#3710#3711#0" expanded="true" />
+            <element signature="e#3758#3759#0" expanded="true" />
+            <element signature="e#3804#3805#0" expanded="true" />
+            <element signature="e#3847#3848#0" expanded="true" />
+            <element signature="e#3888#3889#0" expanded="true" />
+            <element signature="e#3936#3937#0" expanded="true" />
+            <element signature="e#3982#3983#0" expanded="true" />
+            <element signature="e#4169#4170#0" expanded="true" />
+            <element signature="e#4205#4206#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/projetcalculatrice/Model/MathsOperationList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="7" column="16" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/projetcalculatrice/Model/MathsTrigoOperationsList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="14" column="17" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/projetcalculatrice/Model/CalcDisplayData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="46">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/projetcalculatrice/Controller/Controller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="690">
+          <caret line="40" selection-start-line="40" selection-end-line="40" />
+          <folding>
+            <element signature="e#10891#10892#0" expanded="true" />
+            <element signature="e#10936#10937#0" expanded="true" />
+            <element signature="e#10992#10993#0" expanded="true" />
+            <element signature="e#11046#11047#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/projetcalculatrice/Controller/ButtonInfo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="50" column="20" selection-start-line="50" selection-start-column="20" selection-end-line="50" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="384">
-          <caret line="105" column="20" selection-start-line="105" selection-start-column="20" selection-end-line="105" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/projetcalculatrice/Model/CalcDisplayData.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-99">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/projetcalculatrice/Controller/StringInfo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="736">
-          <caret line="53" column="23" selection-start-line="53" selection-start-column="23" selection-end-line="53" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/projetcalculatrice/Model/MathsOperationList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="223">
-          <caret line="11" column="17" lean-forward="true" selection-end-line="16" selection-end-column="1" />
+        <state relative-caret-position="1541">
+          <caret line="67" selection-start-line="67" selection-end-line="67" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/projetcalculatrice/Model/StringParser.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="58" column="24" lean-forward="true" selection-start-line="58" selection-start-column="24" selection-end-line="58" selection-end-column="24" />
+        <state relative-caret-position="154">
+          <caret line="50" column="49" selection-start-line="50" selection-start-column="49" selection-end-line="50" selection-end-column="49" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/projetcalculatrice/Model/Model.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="269">
-          <caret line="53" column="43" selection-start-line="53" selection-start-column="43" selection-end-line="53" selection-end-column="43" />
+        <state relative-caret-position="54">
+          <caret line="34" column="80" selection-start-line="34" selection-start-column="80" selection-end-line="34" selection-end-column="80" />
           <folding>
             <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/projetcalculatrice/Model/NumberList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="39">
-          <caret line="8" column="17" lean-forward="true" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/projetcalculatrice/Controller/Controller.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="99" column="54" lean-forward="true" selection-start-line="99" selection-start-column="54" selection-end-line="99" selection-end-column="54" />
-          <folding>
-            <element signature="e#8928#8929#0" expanded="true" />
-            <element signature="e#9038#9039#0" expanded="true" />
           </folding>
         </state>
       </provider>

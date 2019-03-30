@@ -73,13 +73,18 @@ public class Controller {
                     } catch (Exception ex) {
                         ex.getMessage();
                     }
-
                 } else if (buttonInfo.isCBracket) {
                 } // do nothing
                 else if (buttonInfo.isOperator) {
                 } // do nothing
                 else if (buttonInfo.isEquals) {
                 } // do nothing
+                else if (buttonInfo.isOperation) {
+                    setComputationText(computationText + buttonText);
+                }
+                else if (buttonInfo.isPi) {
+                    setComputationText(computationText + buttonText);
+                }
 
             } else { // string is NOT empty
                 try {
@@ -141,12 +146,17 @@ public class Controller {
                             setComputationText(computationText + buttonText);
                             isOpened.add(true);
                             System.out.println(isOpened.size());
+                        }else if (buttonInfo.isOperation) {
+                                setComputationText(computationText + buttonText);
 
                         } else if (buttonInfo.isCBracket) {
                             // do nothing
+                        }else if (buttonInfo.isPi) {
+                            setComputationText(computationText + buttonText);
                         } else if (buttonInfo.isEquals) {
                             // do nothing
                         }
+
                     } else if (stringInfo.isLastCharacterCBracket) {
                         if (buttonInfo.isOperator) {
                             setComputationText(computationText + buttonText);
@@ -164,7 +174,6 @@ public class Controller {
                             performComputation();
                         }
                     } else if (stringInfo.isLastCharacterOperator) {
-
                         if (buttonInfo.isNumber) {
                             setComputationText(computationText + buttonText);
                         } else if (buttonInfo.isOperator) {
@@ -176,6 +185,10 @@ public class Controller {
                         } else if (buttonInfo.isOBracket) {
                             setComputationText(computationText + buttonText);
                             isOpened.add(true);
+                        }else if (buttonInfo.isOperation) {
+                            setComputationText(computationText + buttonText);
+                        }else if (buttonInfo.isPi) {
+                            setComputationText(computationText + buttonText);
                         } else if (buttonInfo.isEquals) {
                         } // do nothing
 
@@ -190,6 +203,28 @@ public class Controller {
                         } else if (buttonInfo.isEquals) {
                         } // do nothing
 
+                    }
+                    if (stringInfo.isLastCharacterPi) {
+
+                        if (buttonInfo.isNumber) {
+                        } else if (buttonInfo.isOperator) {
+                            setComputationText(computationText + buttonText);
+                        } else if (buttonInfo.isDot) {
+                        } else if (buttonInfo.isOBracket) {
+                            // do nothing
+                        } else if (buttonInfo.isCBracket && !isOpened.isEmpty()) {
+                            setComputationText(computationText + buttonText);
+                            Object o = isOpened.get(isOpened.size() - 1);
+                            isOpened.remove(o);
+                        } else if (buttonInfo.isEquals) {
+                            while (!isOpened.isEmpty()) {
+                                setComputationText(computationText + ")");
+                                Object o = isOpened.get(isOpened.size() - 1);
+                                isOpened.remove(o);
+                            }
+                            OperationAlreadyHappened = true;
+                            performComputation();
+                        }
                     }
                 } catch (Exception ex) {
                     ex.getMessage();
