@@ -174,6 +174,7 @@ public class Controller {
                             performComputation();
                         }
                     } else if (stringInfo.isLastCharacterOperator) {
+                        System.out.println("ok");
                         if (buttonInfo.isNumber) {
                             setComputationText(computationText + buttonText);
                         } else if (buttonInfo.isOperator) {

@@ -209,6 +209,14 @@ public class View extends JFrame implements Observer {
 
         gbc.gridx = 1;
         add(buttonRetriever.next(), gbc);
+        gbc.gridx = 2;
+        add(buttonRetriever.next(), gbc);
+        gbc.gridx = 3;
+        add(buttonRetriever.next(), gbc);
+
+        gbc.gridx = 0;
+        gbc.gridy = 12;
+        add(buttonRetriever.next(), gbc);
 
     }
 
@@ -252,6 +260,10 @@ public class View extends JFrame implements Observer {
         buttonList.add(new JButton("PI"));
         buttonList.add(new JButton("*10^"));
         buttonList.add(new JButton("!"));
+        buttonList.add(new JButton("e"));
+        buttonList.add(new JButton("log"));
+        buttonList.add(new JButton("ln"));
+
 
     }
 

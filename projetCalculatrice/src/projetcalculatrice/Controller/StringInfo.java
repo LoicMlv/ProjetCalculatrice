@@ -57,6 +57,7 @@ public class StringInfo {
                     case "^" : isLastCharacterOperator= true; break;
                     case "!" : isLastCharacterOperator= true; break;
 
+
                     case "." : isLastCharacterDot = true; break;
 
                     default : System.out.println("Cannot parse last character!");
@@ -72,11 +73,19 @@ public class StringInfo {
                     case "ASI" : isLastCharacterOperator = true; break;
                     case "ACO" : isLastCharacterOperator = true; break;
                     case "ATA" : isLastCharacterOperator = true; break;
+                    case "log" : isLastCharacterOperator = true; break;
                 }
             }else if (computationText.length() >=2){
                 String possibleOperande = computationText.substring(computationText.length()-2);
                 switch (possibleOperande){
                     case "PI" : isLastCharacterPi = true; break;
+                    case "ln" : isLastCharacterOperator = true; break;
+
+                }
+            }else if (computationText.length() >=1){
+                String possibleOperande = computationText.substring(computationText.length()-1);
+                switch (possibleOperande){
+                    case "e" : isLastCharacterOperator = true; break;
                 }
             }
         }

@@ -64,6 +64,9 @@ public class ButtonInfo {
             case "ACO" : isOperation = true; break;
             case "ATA" : isOperation = true; break;
             case "!" : isOperation = true; break;
+            case "e" : isOperation = true; break;
+            case "log" : isOperation = true; break;
+            case "ln" : isOperation = true; break;
 
 
 

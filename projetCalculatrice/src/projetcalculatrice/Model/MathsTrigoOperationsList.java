@@ -13,6 +13,9 @@ public class MathsTrigoOperationsList extends ArrayList <String>{
         add("ACO");
         add("ATA");
         add("!");
+        add("e");
+        add("ln");
+        add("log");
     }
 
 }

@@ -172,6 +172,15 @@ public class Model extends Observable {
                     case "ATA":
                         computationResult = Math.atan(Double.parseDouble(operand));
                         break;
+                    case "e":
+                        computationResult = Math.exp(Double.parseDouble(operand));
+                        break;
+                    case "log":
+                        computationResult = Math.log(Double.parseDouble(operand))/Math.log(10);
+                        break;
+                    case "ln":
+                        computationResult = Math.log(Double.parseDouble(operand));
+                        break;
                     case "!":
                         computationResult = 1;
                         if (Double.parseDouble(operand) >= 0 && Double.parseDouble(operand)%1 ==0) {

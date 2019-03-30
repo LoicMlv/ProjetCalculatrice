@@ -44,7 +44,7 @@ public class StringParser {
 
     private List<String> extractTokens(String string) {
         String[] tokens = string
-                .split(String.format(WITH_DELIMITERS, "PI|ASI|ACO|ATA|SIN|COS|TAN|[*^!/%+-]"));
+                .split(String.format(WITH_DELIMITERS, "log|ln|PI|ASI|ACO|ATA|SIN|COS|TAN|e|[*^!/%+-]"));
         List<String> linkedTokens = new ArrayList<>();
         MathsOperationList possibleOperations = new MathsOperationList();
         // on regarde dans la liste des tokens si un "-" est utilsié dans un calcul ou pour ne nombre negatif
