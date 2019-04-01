@@ -12,6 +12,6 @@ public class MathsOperationList extends ArrayList <String>{
         add("-");
         add("+");
         add("%");
+        add("div");
     }
-
 }

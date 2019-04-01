@@ -29,7 +29,6 @@ public class Model extends Observable {
                 //rappel operationsTokens est du type 3+3
                 if (!possibleOperations.contains(operationsTokens.get(i)) && !possibleTrigoOperations.contains((operationsTokens.get(i)))) {
                     LinkedList<String> opeTokens = new LinkedList<>();
-                    System.out.printf("ok");
                     //on crée une liste de tokens à partir de la liste precedente pour differencier les nombres des operateurs
                     opeTokens = new StringParser(operationsTokens.get(i)).getTokens();
                     //si le premier ou le dernier element de opeTokens n'est pas un operateur on rentre dans le if
@@ -113,6 +112,9 @@ public class Model extends Observable {
                         break;
                     case "%":
                         computationResult = Double.parseDouble(firstOperand) % Double.parseDouble(secondOperand);
+                        break;
+                    case "div":
+                        computationResult = Math.floor(Double.parseDouble(firstOperand) / Double.parseDouble(secondOperand)) ;
                         break;
                     default:
                         computationResult = 69.69;
@@ -325,6 +327,7 @@ public class Model extends Observable {
         update.setCurrentTotal(currentTotal);
         notifyObservers(update);
     }
+
 
     public void ConversionD(){
         double degres = Double.parseDouble(currentTotal)*180/Math.PI;

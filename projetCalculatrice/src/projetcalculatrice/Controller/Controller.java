@@ -59,20 +59,68 @@ public class Controller {
                 return;
             }
 
-            if(buttonInfo.isConversion) {model.Conversion();return;}
+            if (buttonInfo.isConversion) {
+                model.Conversion();
+                return;
+            }
 
-            if(buttonInfo.isConversionD) {model.ConversionD(); button.setText("R"); return; }
+            if (buttonInfo.isM) {
+                for (JButton but : view.getButtonList()){
+                    switch (but.getText()){
+                        case "SIN" : but.setText("ASI"); break;
+                        case "COS" : but.setText("ACO"); break;
+                        case "TAN" : but.setText("ATA"); break;
+                        case "ASI" : but.setText("SIN"); break;
+                        case "ACO" : but.setText("COS"); break;
+                        case "ATA" : but.setText("TAN"); break;
+                        case "^(2)" : but.setText("^(1/2)"); break;
+                        case "^(3)" : but.setText("^(1/3)"); break;
+                        case "^(" : but.setText("^(1/"); break;
+                        case "^(1/2)" : but.setText("^(2)"); break;
+                        case "^(1/3)" : but.setText("^(3)"); break;
+                        case "^(1/" : but.setText("^(1"); break;
 
-            if(buttonInfo.isConversionR) {model.ConversionR(); button.setText("D"); return; }
+                    }
+                }
+            }
+            if (buttonInfo.isS) {
+                for (JButton but : view.getButtonList()){
+                    switch (but.getText()){
+                        case "e" : but.setText("Alea"); break;
+                        case "^(2)" : but.setText("%"); break;
+                        case "^(3)" : but.setText("div"); break;
+                        case "Alea" : but.setText("e"); break;
+                        case "%" : but.setText("^(2)"); break;
+                        case "div" : but.setText("^(3)"); break;
 
-            if(buttonInfo.isAns) {model.Ans(); return;}
+                    }
+                }
+            }
+
+            if (buttonInfo.isConversionD) {
+                model.ConversionD();
+                button.setText("R");
+                return;
+            }
+
+            if (buttonInfo.isConversionR) {
+                model.ConversionR();
+                button.setText("D");
+                return;
+            }
+
+            if (buttonInfo.isAns) {
+                model.Ans();
+                return;
+            }
 
             if (stringInfo.isEmpty) {
 
                 if (buttonInfo.isNumber) {
                     setComputationText(computationText + buttonText);
+                } else if (buttonInfo.isRand) {
+                    setComputationText(computationText + Math.random());
                 } else if (buttonInfo.isDot) {
-                    setComputationText(computationText + buttonText);
                 } else if (buttonInfo.isOBracket) {
                     try {
                         setComputationText(computationText + buttonText);
@@ -88,8 +136,7 @@ public class Controller {
                 } // do nothing
                 else if (buttonInfo.isOperation) {
                     setComputationText(computationText + buttonText);
-                }
-                else if (buttonInfo.isPi) {
+                } else if (buttonInfo.isPi) {
                     setComputationText(computationText + buttonText);
                 }
 
@@ -109,12 +156,12 @@ public class Controller {
                         } else if (buttonInfo.isDot) {
                             NumberList numberList = new NumberList();
                             int lastIndexOfPoint = computationText.lastIndexOf(".");
-                            int i= lastIndexOfPoint+1;
+                            int i = lastIndexOfPoint + 1;
                             char[] computationTextArray = computationText.toCharArray();
                             boolean doesDotExist = false;
                             // on verifie ici qu'il n'existe pas deja un point dans l'expression
-                            if(lastIndexOfPoint!=-1) {
-                                doesDotExist=true;
+                            if (lastIndexOfPoint != -1) {
+                                doesDotExist = true;
                                 while (i <= computationTextArray.length && doesDotExist) {
                                     if (numberList.contains(computationTextArray[i])) {
                                         i++;
@@ -145,6 +192,8 @@ public class Controller {
                     } else if (stringInfo.isLastCharacterOBracket) {
                         if (buttonInfo.isNumber) {
                             setComputationText(computationText + buttonText);
+                        } else if (buttonInfo.isRand) {
+                            setComputationText(computationText + Math.random());
                         } else if (buttonInfo.isOperator) {
                             if (buttonInfo.isSubstract) {
                                 setComputationText(computationText + buttonText);
@@ -154,12 +203,12 @@ public class Controller {
                             setComputationText(computationText + buttonText);
                             isOpened.add(true);
                             System.out.println(isOpened.size());
-                        }else if (buttonInfo.isOperation) {
-                                setComputationText(computationText + buttonText);
+                        } else if (buttonInfo.isOperation) {
+                            setComputationText(computationText + buttonText);
 
                         } else if (buttonInfo.isCBracket) {
                             // do nothing
-                        }else if (buttonInfo.isPi) {
+                        } else if (buttonInfo.isPi) {
                             setComputationText(computationText + buttonText);
                         } else if (buttonInfo.isEquals) {
                             // do nothing
@@ -185,6 +234,8 @@ public class Controller {
                         System.out.println("ok");
                         if (buttonInfo.isNumber) {
                             setComputationText(computationText + buttonText);
+                        } else if (buttonInfo.isRand) {
+                            setComputationText(computationText + Math.random());
                         } else if (buttonInfo.isOperator) {
                             if (stringInfo.isPreviousCharOBracket) {
                                 setComputationText(computationText.substring(0, stringInfo.lastCharIndex) + buttonText);
@@ -194,9 +245,9 @@ public class Controller {
                         } else if (buttonInfo.isOBracket) {
                             setComputationText(computationText + buttonText);
                             isOpened.add(true);
-                        }else if (buttonInfo.isOperation) {
+                        } else if (buttonInfo.isOperation) {
                             setComputationText(computationText + buttonText);
-                        }else if (buttonInfo.isPi) {
+                        } else if (buttonInfo.isPi) {
                             setComputationText(computationText + buttonText);
                         } else if (buttonInfo.isEquals) {
                         } // do nothing

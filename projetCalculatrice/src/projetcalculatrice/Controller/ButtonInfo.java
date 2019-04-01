@@ -2,6 +2,8 @@ package projetcalculatrice.Controller;
 
 public class ButtonInfo {
 
+    boolean isM;
+    boolean isS;
     boolean isOperator;
     boolean isEquals;
     boolean isDot;
@@ -17,6 +19,7 @@ public class ButtonInfo {
     boolean isConversionD;
     boolean isConversionR;
     boolean isAns;
+    boolean isRand;
 
     public ButtonInfo (String buttonText){
 
@@ -52,6 +55,7 @@ public class ButtonInfo {
             case "*" : isOperator = true; break;
             case "/" :  isOperator = true; break;
             case "%" : isOperator = true; break;
+            case "div" : isOperator = true; break;
             case "^(2)" : isOperator = true; break;
             case "^(3)" : isOperator = true; break;
             case "^(10)" : isOperator = true; break;
@@ -72,7 +76,10 @@ public class ButtonInfo {
             case "log" : isOperation = true; break;
             case "ln" : isOperation = true; break;
 
+            case "Alea" : isRand = true; break;
 
+            case "M" : isM = true; break;
+            case "S" : isS = true; break;
 
             case "+/-": isConversion = true; break;
 
@@ -104,6 +111,14 @@ public class ButtonInfo {
 
     public boolean isDot() {
         return isDot;
+    }
+
+    public boolean isM() {
+        return isM;
+    }
+
+    public boolean isS() {
+        return isS;
     }
 
     public boolean isClear() {

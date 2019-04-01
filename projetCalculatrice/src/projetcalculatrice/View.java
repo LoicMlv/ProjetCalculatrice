@@ -17,7 +17,10 @@ public class View extends JFrame implements Observer {
     private JTextField computationDisplay;
     private ArrayList <JButton> buttonList;
     private DefaultListModel dlm;
+    private JList list;
+    private JScrollPane sp;
     private JPanel panel1;
+    private JPanel panel2;
 
     public View(Model model) {
 
@@ -27,10 +30,17 @@ public class View extends JFrame implements Observer {
         totalDisplay = new JTextField();
         configureTotalDisplay();
         dlm = new DefaultListModel();
+        list = new JList(dlm);
+        sp = new JScrollPane(list);
+        sp.createHorizontalScrollBar();
+        panel2 = new JPanel();
+        panel2.add(sp);
         computationDisplay = new JTextField();
         configureComputationDisplay();
         createButtonList();
+panel2.setPreferredSize(new Dimension(100,0));
         implementGridLayout();
+
     }
 
     private void configureComputationDisplay() {
@@ -66,12 +76,16 @@ public class View extends JFrame implements Observer {
 
         //creating iterator to iterate through all buttons
         Iterator <JButton> buttonRetriever = buttonList.iterator();
-
+        //dlm display
+        gbc.gridx = 5;
+        gbc.gridy = 0;
+        gbc.gridwidth=5;
+        add(panel2);
         //first row//
         gbc.gridx = 0;
         gbc.gridy = 2;
         gbc.gridwidth=1;
-        gbc.fill = GridBagConstraints.BOTH;;
+        gbc.fill = GridBagConstraints.BOTH;
         gbc.weightx = .1;
         gbc.weighty = .1;
 
@@ -204,18 +218,8 @@ public class View extends JFrame implements Observer {
         gbc.gridy = 11;
         add(buttonRetriever.next(), gbc);
 
-        gbc.gridx = 1;
-        add(buttonRetriever.next(), gbc);
-        gbc.gridx = 2;
-        add(buttonRetriever.next(), gbc);
-        gbc.gridx = 3;
-        add(buttonRetriever.next(), gbc);
 
-        gbc.gridx = 0;
-        gbc.gridy = 12;
-        add(buttonRetriever.next(), gbc);
-        gbc.gridx = 1;
-        add(buttonRetriever.next(), gbc);
+
     }
 
     private void createButtonList() {
@@ -237,7 +241,6 @@ public class View extends JFrame implements Observer {
         buttonList.add(new JButton("C"));
         buttonList.add(new JButton("*"));
         buttonList.add(new JButton("="));
-        buttonList.add(new JButton("%"));
         buttonList.add(new JButton("DEL"));
         buttonList.add(new JButton("("));
         buttonList.add(new JButton(")"));
@@ -246,15 +249,9 @@ public class View extends JFrame implements Observer {
         buttonList.add(new JButton("^(3)"));
         buttonList.add(new JButton("^(10)"));
         buttonList.add(new JButton("^("));
-        buttonList.add(new JButton("^(1/2)"));
-        buttonList.add(new JButton("^(1/3)"));
-        buttonList.add(new JButton("^(1/"));
         buttonList.add(new JButton("SIN"));
         buttonList.add(new JButton("COS"));
         buttonList.add(new JButton("TAN"));
-        buttonList.add(new JButton("ASI"));
-        buttonList.add(new JButton("ACO"));
-        buttonList.add(new JButton("ATA"));
         buttonList.add(new JButton("PI"));
         buttonList.add(new JButton("*10^"));
         buttonList.add(new JButton("!"));
@@ -262,6 +259,10 @@ public class View extends JFrame implements Observer {
         buttonList.add(new JButton("log"));
         buttonList.add(new JButton("ln"));
         buttonList.add(new JButton("D"));
+        buttonList.add(new JButton("S"));
+        buttonList.add(new JButton("M"));
+
+
 
 
 
@@ -281,7 +282,7 @@ public class View extends JFrame implements Observer {
 
     private void setWindowPreferences() {
         setVisible(true);
-        setSize(new Dimension(300, 400));
+        setSize(new Dimension(400, 500));
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setLocation(420, 220);
     }
@@ -290,6 +291,10 @@ public class View extends JFrame implements Observer {
         for (JButton button : buttonList){
             button.addActionListener(actionListener);
         }
+    }
+
+    public ArrayList<JButton> getButtonList(){
+        return buttonList;
     }
 
     public void addElementList(String str){
