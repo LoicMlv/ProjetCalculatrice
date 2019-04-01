@@ -130,9 +130,9 @@ public class Model extends Observable {
 
         // Récupération du dernier nombre qui est donc le nombre à convertir
         String number2Convert = numberTable[numberTable.length-1];
-        String symbol2Convert;
-        String symbol;
-        String postSymbol;
+        String symbol2Convert = "";
+        String symbol = "";
+        String postSymbol = "";
         boolean symbolCheck = false;
         boolean substractionCheck = false;
         if (currentInputString.length() > number2Convert.length()){
@@ -146,9 +146,10 @@ public class Model extends Observable {
                 // Récupération du caractère juste avant le symbole à convertir
                 symbol = currentInputString.substring(currentInputString.length() - number2Convert.length() - 2, currentInputString.length() - number2Convert.length() - 1);
                 // Si ce caractère appartient (%/*) alors on passe le boolean à vrai, ce qui permettra de garder ce symbole sans y ajouter le caractère "+" après
-                if(symbol.equals("%") || symbol.equals("*") || symbol.equals("/")){
+                if(symbol.equals("%") || symbol.equals("*") || symbol.equals("/") || symbol.equals("(")){
                     substractionCheck = true;
                 }
+
             }
 
             // Récupération des nombres et des symboles qui se trouve avant le symbole du nombre à convertir
@@ -168,8 +169,11 @@ public class Model extends Observable {
 
 
         // Modification de la valeur du symbole
+        String OBracket ="";
+        String CBracket = "";
         if(symbolCheck){
-            symbol2Convert += "-";
+            symbol2Convert += "(-";
+            CBracket = ")";
         }else if(substractionCheck){
             symbol2Convert = "";
         }else{
@@ -181,14 +185,46 @@ public class Model extends Observable {
                 symbol2Convert += "-";
             }
         }
+
+        // Suppression des parenthèse lorsque l'on revient à un positif
+        if(symbol.equals("(") && number2Convert.endsWith(")")){
+            postSymbol = postSymbol.substring(0, postSymbol.length()-1);
+            number2Convert = number2Convert.substring(0,number2Convert.length()-1);
+        }
         // On recréer la chaine de calcul avec la conversion effectuée
-        currentInputString = postSymbol + symbol2Convert + number2Convert;
+        currentInputString = postSymbol + symbol2Convert + number2Convert + CBracket;
         setChanged();
         CalcDisplayData update = new CalcDisplayData();
         update.setComputationText(currentInputString);
 
         notifyObservers(update);
 
+    }
+    public void ConversionR(){
+        double radian = Double.parseDouble(currentTotal)*Math.PI/180;
+        currentTotal = Double.toString(radian);
+
+        setChanged();
+        CalcDisplayData update = new CalcDisplayData();
+        update.setCurrentTotal(currentTotal);
+        notifyObservers(update);
+    }
+
+    public void ConversionD(){
+        double degres = Double.parseDouble(currentTotal)*180/Math.PI;
+        currentTotal = Double.toString(degres);
+
+        setChanged();
+        CalcDisplayData update = new CalcDisplayData();
+        update.setCurrentTotal(currentTotal);
+        notifyObservers(update);
+    }
+
+    public void Ans(){
+        setChanged();
+        CalcDisplayData update = new CalcDisplayData();
+        update.setComputationText(currentTotal);
+        notifyObservers(update);
     }
 
     public void Delete() {
@@ -247,6 +283,9 @@ public class Model extends Observable {
         } else {
             currentTotal = Double.toString(doubleTotal);
         }
+    }
+    public String getCurrentTotal(){
+        return currentTotal;
     }
 
 }

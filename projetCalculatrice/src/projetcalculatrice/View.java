@@ -1,8 +1,5 @@
 package projetcalculatrice;
-import java.awt.Dimension;
-import java.awt.Font;
-import java.awt.GridBagConstraints;
-import java.awt.GridBagLayout;
+import java.awt.*;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -19,6 +16,7 @@ public class View extends JFrame implements Observer {
     private JTextField totalDisplay;
     private JTextField computationDisplay;
     private ArrayList <JButton> buttonList;
+    private DefaultListModel dlm;
     private JPanel panel1;
 
     public View(Model model) {
@@ -28,10 +26,9 @@ public class View extends JFrame implements Observer {
 
         totalDisplay = new JTextField();
         configureTotalDisplay();
-
+        dlm = new DefaultListModel();
         computationDisplay = new JTextField();
         configureComputationDisplay();
-
         createButtonList();
         implementGridLayout();
     }
@@ -47,6 +44,7 @@ public class View extends JFrame implements Observer {
     private void implementGridLayout() {
         GridBagConstraints gbc = new GridBagConstraints();
         setLayout(new GridBagLayout());
+
         addComponentsToGrid(gbc);
     }
 
@@ -152,13 +150,24 @@ public class View extends JFrame implements Observer {
         gbc.gridwidth=4;
         add(buttonRetriever.next(), gbc);
 
-
+        gbc.gridx= 0;
+        gbc.gridy= 8;
+        gbc.gridwidth=1;
+        add(buttonRetriever.next(),gbc);
+        gbc.gridx = 1;
+        add(buttonRetriever.next(),gbc);
 
         //last row, equals button
         gbc.gridx = 0;
-        gbc.gridy = 8;
+        gbc.gridy = 9;
         gbc.gridwidth=4;
         add(buttonRetriever.next(), gbc);
+
+        gbc.gridx = 5;
+        gbc.gridy = 0;
+        gbc.gridwidth = 4;
+        JList list = new JList(dlm);
+        add(list);
     }
 
     private void createButtonList() {
@@ -184,10 +193,14 @@ public class View extends JFrame implements Observer {
         buttonList.add(new JButton("("));
         buttonList.add(new JButton(")"));
         buttonList.add(new JButton("C"));
+        buttonList.add(new JButton("D"));
+        buttonList.add(new JButton("Ans"));
+
         buttonList.add(new JButton("="));
 
 
     }
+
 
     private void configureTotalDisplay() {
         totalDisplay.setPreferredSize(new Dimension(600, 40));
@@ -211,6 +224,13 @@ public class View extends JFrame implements Observer {
         for (JButton button : buttonList){
             button.addActionListener(actionListener);
         }
+    }
+
+    public void addElementList(String str){
+        dlm.addElement(str);
+    }
+    public DefaultListModel getDLM(){
+        return dlm;
     }
 
     public void setComputationDisplayText(String string){

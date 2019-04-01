@@ -2,11 +2,12 @@ package projetcalculatrice.Controller;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.*;
 
-import javax.swing.JButton;
+import javax.swing.*;
 
 import projetcalculatrice.Model.Model;
 import projetcalculatrice.View;
@@ -31,11 +32,9 @@ public class Controller {
         ArrayList<Boolean> isOpened = new ArrayList<>();
 
         public void actionPerformed(ActionEvent e) {
-
             JButton button = (JButton) e.getSource();
             String buttonText = button.getText();
             String computationText = view.getComputationDisplayText();
-
             ButtonInfo buttonInfo = new ButtonInfo(buttonText);
             StringInfo stringInfo = new StringInfo(computationText);
 
@@ -55,6 +54,11 @@ public class Controller {
 
             if(buttonInfo.isConversion) {model.Conversion();return;}
 
+            if(buttonInfo.isConversionD) {model.ConversionD(); button.setText("R"); return; }
+
+            if(buttonInfo.isConversionR) {model.ConversionR(); button.setText("D"); return; }
+
+            if(buttonInfo.isAns) {model.Ans(); return;}
 
             if (stringInfo.isEmpty) {
 
@@ -102,6 +106,7 @@ public class Controller {
                             }
                             OperationAlreadyHappened = true;
                             performComputation();
+                            view.getDLM().addElement(computationText + "=" + model.getCurrentTotal());
                         }
                     }
                     else if (stringInfo.isLastCharacterOBracket) {

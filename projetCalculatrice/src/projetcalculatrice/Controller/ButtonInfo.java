@@ -12,6 +12,9 @@ public class ButtonInfo {
     boolean isOBracket;
     boolean isCBracket;
     boolean isSubstract;
+    boolean isConversionD;
+    boolean isConversionR;
+    boolean isAns;
 
     public ButtonInfo (String buttonText){
 
@@ -48,6 +51,11 @@ public class ButtonInfo {
             case "%" : isOperator = true; break;
 
             case "+/-": isConversion = true; break;
+
+            case "D": isConversionD = true; break;
+            case "R": isConversionR = true; break;
+
+            case "Ans": isAns = true; break;
 
             case "=" : isEquals = true; break;
 
@@ -87,5 +95,13 @@ public class ButtonInfo {
     }
 
     public boolean isCBracket() { return isCBracket; }
+
+    public boolean isConversionD() { return isConversionD; }
+
+    public boolean isConversionR() { return isConversionR; }
+
+    public boolean isAns() {return isAns; }
+
+    public boolean isSubstract() { return  isSubstract; }
 
 }
