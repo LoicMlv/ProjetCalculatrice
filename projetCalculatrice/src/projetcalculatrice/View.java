@@ -214,6 +214,8 @@ public class View extends JFrame implements Observer {
         gbc.gridx = 0;
         gbc.gridy = 12;
         add(buttonRetriever.next(), gbc);
+        gbc.gridx = 1;
+        add(buttonRetriever.next(), gbc);
     }
 
     private void createButtonList() {
