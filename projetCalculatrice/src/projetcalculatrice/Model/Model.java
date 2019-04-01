@@ -18,8 +18,6 @@ public class Model extends Observable {
 
     public void computeString() {
         LinkedList<String> operationsTokens = new LinkedList<>();
-        LinkedList<String> opeTokens = new LinkedList<>();
-
         MathsOperationList possibleOperations = new MathsOperationList();
         MathsTrigoOperationsList possibleTrigoOperations = new MathsTrigoOperationsList();
         operationsTokens = new StringParser(currentInputString).getTokens();
