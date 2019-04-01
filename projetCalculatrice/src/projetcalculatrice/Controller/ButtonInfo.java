@@ -14,6 +14,9 @@ public class ButtonInfo {
     boolean isSubstract;
     boolean isOperation;
     boolean isPi;
+    boolean isConversionD;
+    boolean isConversionR;
+    boolean isAns;
 
     public ButtonInfo (String buttonText){
 
@@ -73,6 +76,11 @@ public class ButtonInfo {
 
             case "+/-": isConversion = true; break;
 
+            case "D": isConversionD = true; break;
+            case "R": isConversionR = true; break;
+
+            case "Ans": isAns = true; break;
+
             case "=" : isEquals = true; break;
 
             default : System.out.println("BUTTON TYPE NOT FOUND");
@@ -116,5 +124,13 @@ public class ButtonInfo {
 
     public boolean isPi() { return isPi; }
 
+
+    public boolean isConversionD() { return isConversionD; }
+
+    public boolean isConversionR() { return isConversionR; }
+
+    public boolean isAns() {return isAns; }
+
+    public boolean isSubstract() { return  isSubstract; }
 
 }

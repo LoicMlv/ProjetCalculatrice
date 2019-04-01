@@ -1,8 +1,5 @@
 package projetcalculatrice;
-import java.awt.Dimension;
-import java.awt.Font;
-import java.awt.GridBagConstraints;
-import java.awt.GridBagLayout;
+import java.awt.*;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -19,6 +16,7 @@ public class View extends JFrame implements Observer {
     private JTextField totalDisplay;
     private JTextField computationDisplay;
     private ArrayList <JButton> buttonList;
+    private DefaultListModel dlm;
     private JPanel panel1;
 
     public View(Model model) {
@@ -28,10 +26,9 @@ public class View extends JFrame implements Observer {
 
         totalDisplay = new JTextField();
         configureTotalDisplay();
-
+        dlm = new DefaultListModel();
         computationDisplay = new JTextField();
         configureComputationDisplay();
-
         createButtonList();
         implementGridLayout();
     }
@@ -47,6 +44,7 @@ public class View extends JFrame implements Observer {
     private void implementGridLayout() {
         GridBagConstraints gbc = new GridBagConstraints();
         setLayout(new GridBagLayout());
+
         addComponentsToGrid(gbc);
     }
 
@@ -216,7 +214,6 @@ public class View extends JFrame implements Observer {
         gbc.gridx = 0;
         gbc.gridy = 12;
         add(buttonRetriever.next(), gbc);
-
     }
 
     private void createButtonList() {
@@ -262,6 +259,9 @@ public class View extends JFrame implements Observer {
         buttonList.add(new JButton("e"));
         buttonList.add(new JButton("log"));
         buttonList.add(new JButton("ln"));
+        buttonList.add(new JButton("D"));
+
+
 
 
     }
@@ -288,6 +288,13 @@ public class View extends JFrame implements Observer {
         for (JButton button : buttonList){
             button.addActionListener(actionListener);
         }
+    }
+
+    public void addElementList(String str){
+        dlm.addElement(str);
+    }
+    public DefaultListModel getDLM(){
+        return dlm;
     }
 
     public void setComputationDisplayText(String string){
